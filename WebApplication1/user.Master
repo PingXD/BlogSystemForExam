@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="user.master.cs" Inherits="WebApplication1.user" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 105px;
+        }
+        .auto-style2 {
+            width: 100%;
+            height: 592px;
+        }
+        .auto-style3 {
+            height: 99px;
+        }
+        .auto-style4 {
+            height: 99px;
+            width: 108px;
+        }
+        .auto-style5 {
+            width: 108px;
+        }
+        .auto-style6 {
+            height: 105px;
+            width: 108px;
+        }
+        .auto-style7 {
+            height: 99px;
+            width: 301px;
+        }
+        .auto-style8 {
+            width: 301px;
+        }
+        .auto-style9 {
+            height: 105px;
+            width: 301px;
+        }
+    </style>
+</head>
+<body style="height: 596px; width: 580px">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <table class="auto-style2">
+                    <tr>
+                        <td class="auto-style4"></td>
+                        <td class="auto-style7">标题</td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style5">&nbsp;</td>
+                        <td class="auto-style8">中心</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style6"></td>
+                        <td class="auto-style9">按钮</td>
+                        <td class="auto-style1"></td>
+                    </tr>
+                </table>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

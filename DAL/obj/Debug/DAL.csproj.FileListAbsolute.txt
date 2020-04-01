@@ -1,0 +1,14 @@
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\DAL.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\DAL.pdb
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\Model.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\Google.Protobuf.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\Renci.SshNet.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\Model.pdb
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\bin\Debug\MySql.Data.xml
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\obj\Debug\DAL.dll
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\obj\Debug\DAL.pdb
+C:\Users\admin\Desktop\张赛的作业\三层架构\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
