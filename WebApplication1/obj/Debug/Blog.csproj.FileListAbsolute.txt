@@ -68,3 +68,7 @@ C:\Users\admin\Desktop\张赛的作业\三层架构\WebApplication1\bin\BouncyCa
 C:\Users\admin\Desktop\张赛的作业\三层架构\WebApplication1\bin\Renci.SshNet.dll
 C:\Users\admin\Desktop\张赛的作业\三层架构\WebApplication1\bin\MySql.Data.xml
 C:\Users\admin\Desktop\张赛的作业\三层架构\WebApplication1\obj\Debug\Blog.csproj.CoreCompileInputs.cache
+D:\GITHUB\BlogAsp\WebApplication1\obj\Debug\Blog.csprojAssemblyReference.cache
+D:\GITHUB\BlogAsp\WebApplication1\obj\Debug\Blog.csproj.CoreCompileInputs.cache
+D:\GITHUB\BlogAsp\WebApplication1\obj\Debug\WebApplication1.dll
+D:\GITHUB\BlogAsp\WebApplication1\obj\Debug\WebApplication1.pdb
