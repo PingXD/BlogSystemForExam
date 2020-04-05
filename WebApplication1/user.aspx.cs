@@ -45,7 +45,8 @@ namespace WebApplication1
             else 
             {
                 Response.Write("<script>alert('账号不存在，请注册哟。');</script>");
-                //Response.Redirect("reg.aspx");
+                //Response.Redirect(string.Format("reg.aspx?unm={0}",name));
+                //当账号不存在时,返回name到注册页面  方便用户不用再次输入(加一次验证 询问是否注册)
             }
             
 

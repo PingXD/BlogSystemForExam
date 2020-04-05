@@ -17,9 +17,20 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string uid = Request.QueryString.Get("uid");
-            string cookiename = "user";
-            bool yn = CookieChecker.CookieCheckeBool(uid, cookiename);
+            string uname = unmbox.Text.Trim();
+            string pwd = CreatMd5.GetMD5(pwdboxy.Text.Trim());
+            users regu = new users();
+            regu.user_name = uname;
+            regu.user_password = pwd;
+            
+            if (UserManage.Add(regu)==1)
+            {
+                Response.Write("<script>alert('注册成功');</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('注册shibai');</script>");
+            }
             
         }
     }

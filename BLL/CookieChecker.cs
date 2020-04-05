@@ -8,6 +8,6 @@ namespace BLL
 {
     public class CookieChecker
     {
-        public static bool CookieCheckeBool(string uid,string cookiename) => CookieChecker.CookieCheckeBool(uid,cookiename);
+        public static bool CookieCheckeBool(string uid, string cookiename) => DAL.CookieChecker.CookieCheacker(uid, cookiename);
     }
 }
