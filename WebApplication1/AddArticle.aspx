@@ -155,7 +155,7 @@
                     var typeId = $("#articleCategory").val();
                     $.ajax({
                         type: "POST",
-                        url: 'Handler1.ashx',
+                        url: 'GetPostEditAll.ashx',
                         data: { 'article_title': title, 'article_content': content, 'typeId': typeId },
                         dataType: 'json',
                         //contentType:"application/json",
