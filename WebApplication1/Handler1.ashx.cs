@@ -10,7 +10,7 @@ using System.IO;
 namespace WebApplication1
 {
     /// <summary>
-    /// Handler1 的摘要说明
+    /// 获取编辑页面post过来的json 调用数据库保存
     /// </summary>
     public class Handler1 : IHttpHandler
     {
@@ -19,21 +19,21 @@ namespace WebApplication1
         {
             //string jsonstr;
             //context.Request.
-            articles art = new articles();
+
             //jsonstr = JsonConvert.SerializeObject(art);
             //context.Response.Write(jsonstr);
             //BLL.Ait.SaveAir(art);
-           // context.Request.ContentType = "application/json";
-           // Stream stream = context.Request.InputStream;
-           // StreamReader sr = new StreamReader(stream);
-           // string search = sr.ReadToEnd();
-           // sr.Close();
-           // var jSetting = new JsonSerializerSettings
-           // {
-           //     NullValueHandling  = NullValueHandling.Ignore
-           // };
-           //art= (RecordResult)JsonConvert.DeserializeObject(search, jSetting);
-            
+            // context.Request.ContentType = "application/json";
+            // Stream stream = context.Request.InputStream;
+            // StreamReader sr = new StreamReader(stream);
+            // string search = sr.ReadToEnd();
+            // sr.Close();
+            // var jSetting = new JsonSerializerSettings
+            // {
+            //     NullValueHandling  = NullValueHandling.Ignore
+            // };
+            //art= (RecordResult)JsonConvert.DeserializeObject(search, jSetting);
+            articles art = new articles();
             art.article_title = context.Request.Form["article_title"].ToString();
             art.article_content = context.Request.Form["article_content"].ToString();
             int t=BLL.Ait.SaveAir(art);
