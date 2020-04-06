@@ -46,6 +46,7 @@
     <Compile Include="comments.cs" />
     <Compile Include="labels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="set_artitle_label.cs" />
     <Compile Include="set_artitle_sort.cs" />
     <Compile Include="sorts.cs" />

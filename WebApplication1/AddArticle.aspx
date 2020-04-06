@@ -163,6 +163,7 @@
                         success: function (data) {
                             //debugger;
                             if ("success" == data.result) {
+                                //这里代表的是 json的result值为success
                                 alert("保存成功!");
                                 setTimeout(function () {
                                     window.close();

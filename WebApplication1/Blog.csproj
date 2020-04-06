@@ -83,6 +83,29 @@
     <Content Include="css\editormd.preview.min.css" />
     <Content Include="fonts\editormd-logo.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\loading%402x.gif" />
+    <Content Include="images\loading%403x.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logos\editormd-favicon-16x16.ico" />
+    <Content Include="images\logos\editormd-favicon-24x24.ico" />
+    <Content Include="images\logos\editormd-favicon-32x32.ico" />
+    <Content Include="images\logos\editormd-favicon-48x48.ico" />
+    <Content Include="images\logos\editormd-favicon-64x64.ico" />
+    <Content Include="images\logos\editormd-logo-114x114.png" />
+    <Content Include="images\logos\editormd-logo-120x120.png" />
+    <Content Include="images\logos\editormd-logo-144x144.png" />
+    <Content Include="images\logos\editormd-logo-16x16.png" />
+    <Content Include="images\logos\editormd-logo-180x180.png" />
+    <Content Include="images\logos\editormd-logo-240x240.png" />
+    <Content Include="images\logos\editormd-logo-24x24.png" />
+    <Content Include="images\logos\editormd-logo-320x320.png" />
+    <Content Include="images\logos\editormd-logo-32x32.png" />
+    <Content Include="images\logos\editormd-logo-48x48.png" />
+    <Content Include="images\logos\editormd-logo-57x57.png" />
+    <Content Include="images\logos\editormd-logo-64x64.png" />
+    <Content Include="images\logos\editormd-logo-72x72.png" />
+    <Content Include="images\logos\editormd-logo-96x96.png" />
+    <Content Include="images\logos\vi.png" />
     <Content Include="img\bgd.png" />
     <Content Include="img\pwd.png" />
     <Content Include="img\title.png" />
@@ -413,8 +436,19 @@
     <Content Include="lib\raphael.min.js" />
     <Content Include="lib\sequence-diagram.min.js" />
     <Content Include="lib\underscore.min.js" />
+    <Content Include="plugins\code-block-dialog\code-block-dialog.js" />
+    <Content Include="plugins\emoji-dialog\emoji-dialog.js" />
+    <Content Include="plugins\goto-line-dialog\goto-line-dialog.js" />
+    <Content Include="plugins\help-dialog\help-dialog.js" />
+    <Content Include="plugins\html-entities-dialog\html-entities-dialog.js" />
+    <Content Include="plugins\image-dialog\image-dialog.js" />
+    <Content Include="plugins\link-dialog\link-dialog.js" />
+    <Content Include="plugins\plugin-template.js" />
+    <Content Include="plugins\preformatted-text-dialog\preformatted-text-dialog.js" />
+    <Content Include="plugins\reference-link-dialog\reference-link-dialog.js" />
+    <Content Include="plugins\table-dialog\table-dialog.js" />
+    <Content Include="plugins\test-plugin\test-plugin.js" />
     <Content Include="reg.aspx" />
-    <Content Include="saveOrUpdateArticle.aspx" />
     <Content Include="user.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
@@ -438,13 +472,6 @@
     </Compile>
     <Compile Include="reg.aspx.designer.cs">
       <DependentUpon>reg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="saveOrUpdateArticle.aspx.cs">
-      <DependentUpon>saveOrUpdateArticle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="saveOrUpdateArticle.aspx.designer.cs">
-      <DependentUpon>saveOrUpdateArticle.aspx</DependentUpon>
     </Compile>
     <Compile Include="user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>
@@ -492,6 +519,9 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Handler1.ashx" />
     <None Include="packages.config" />
+    <Content Include="plugins\emoji-dialog\emoji.json" />
+    <Content Include="plugins\help-dialog\help.md" />
+    <Content Include="plugins\html-entities-dialog\html-entities.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
