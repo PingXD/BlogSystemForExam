@@ -21,11 +21,11 @@ namespace WebApplication1
             {
                 if (yn == true)
                 {
-                    Label1.Text = "对了";
+                   //传递确认变量
                 }
                 else
                 {
-                    Label1.Text = "cuole";
+                    //传递错误变量。
                 }
             }
 

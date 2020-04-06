@@ -138,3 +138,7 @@ D:\GITHUB\BlogAsp\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompiler
 D:\GITHUB\BlogAsp\WebApplication1\bin\DAL.pdb
 D:\GITHUB\BlogAsp\WebApplication1\bin\MySql.Data.xml
 D:\GITHUB\BlogAsp\WebApplication1\obj\Debug\Blog.csproj.CopyComplete
+D:\GITHUB\BlogAsp\WebApplication1\bin\MarkdownSharp.dll
+D:\GITHUB\BlogAsp\WebApplication1\bin\MarkdownSharp.xml
+D:\GITHUB\BlogAsp\WebApplication1\bin\Newtonsoft.Json.dll
+D:\GITHUB\BlogAsp\WebApplication1\bin\Newtonsoft.Json.xml

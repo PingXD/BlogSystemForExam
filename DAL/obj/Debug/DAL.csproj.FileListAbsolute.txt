@@ -26,3 +26,5 @@ D:\GITHUB\BlogAsp\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\GITHUB\BlogAsp\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\GITHUB\BlogAsp\DAL\obj\Debug\DAL.dll
 D:\GITHUB\BlogAsp\DAL\obj\Debug\DAL.pdb
+D:\GITHUB\BlogAsp\DAL\bin\Debug\MarkdownSharp.dll
+D:\GITHUB\BlogAsp\DAL\bin\Debug\MarkdownSharp.xml

@@ -44,7 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MarkdownSharp, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MarkdownSharp.2.0.5\lib\net40\MarkdownSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,16 +74,363 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddArticle.aspx" />
+    <Content Include="css\editormd.css" />
+    <Content Include="css\editormd.logo.css" />
+    <Content Include="css\editormd.logo.min.css" />
+    <Content Include="css\editormd.min.css" />
+    <Content Include="css\editormd.preview.css" />
+    <Content Include="css\editormd.preview.min.css" />
+    <Content Include="fonts\editormd-logo.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\bgd.png" />
     <Content Include="img\pwd.png" />
     <Content Include="img\title.png" />
     <Content Include="img\uname.png" />
+    <Content Include="js\editormd.amd.js" />
+    <Content Include="js\editormd.amd.min.js" />
+    <Content Include="js\editormd.js" />
+    <Content Include="js\editormd.min.js" />
+    <Content Include="js\Gulpfile.js" />
+    <Content Include="lib\codemirror\addons.min.js" />
+    <Content Include="lib\codemirror\addon\comment\comment.js" />
+    <Content Include="lib\codemirror\addon\comment\continuecomment.js" />
+    <Content Include="lib\codemirror\addon\dialog\dialog.css" />
+    <Content Include="lib\codemirror\addon\dialog\dialog.js" />
+    <Content Include="lib\codemirror\addon\display\fullscreen.css" />
+    <Content Include="lib\codemirror\addon\display\fullscreen.js" />
+    <Content Include="lib\codemirror\addon\display\panel.js" />
+    <Content Include="lib\codemirror\addon\display\placeholder.js" />
+    <Content Include="lib\codemirror\addon\display\rulers.js" />
+    <Content Include="lib\codemirror\addon\edit\closebrackets.js" />
+    <Content Include="lib\codemirror\addon\edit\closetag.js" />
+    <Content Include="lib\codemirror\addon\edit\continuelist.js" />
+    <Content Include="lib\codemirror\addon\edit\matchbrackets.js" />
+    <Content Include="lib\codemirror\addon\edit\matchtags.js" />
+    <Content Include="lib\codemirror\addon\edit\trailingspace.js" />
+    <Content Include="lib\codemirror\addon\fold\brace-fold.js" />
+    <Content Include="lib\codemirror\addon\fold\comment-fold.js" />
+    <Content Include="lib\codemirror\addon\fold\foldcode.js" />
+    <Content Include="lib\codemirror\addon\fold\foldgutter.css" />
+    <Content Include="lib\codemirror\addon\fold\foldgutter.js" />
+    <Content Include="lib\codemirror\addon\fold\indent-fold.js" />
+    <Content Include="lib\codemirror\addon\fold\markdown-fold.js" />
+    <Content Include="lib\codemirror\addon\fold\xml-fold.js" />
+    <Content Include="lib\codemirror\addon\hint\anyword-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\css-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\html-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\javascript-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\show-hint.css" />
+    <Content Include="lib\codemirror\addon\hint\show-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\sql-hint.js" />
+    <Content Include="lib\codemirror\addon\hint\xml-hint.js" />
+    <Content Include="lib\codemirror\addon\lint\coffeescript-lint.js" />
+    <Content Include="lib\codemirror\addon\lint\css-lint.js" />
+    <Content Include="lib\codemirror\addon\lint\javascript-lint.js" />
+    <Content Include="lib\codemirror\addon\lint\json-lint.js" />
+    <Content Include="lib\codemirror\addon\lint\lint.css" />
+    <Content Include="lib\codemirror\addon\lint\lint.js" />
+    <Content Include="lib\codemirror\addon\lint\yaml-lint.js" />
+    <Content Include="lib\codemirror\addon\merge\merge.css" />
+    <Content Include="lib\codemirror\addon\merge\merge.js" />
+    <Content Include="lib\codemirror\addon\mode\loadmode.js" />
+    <Content Include="lib\codemirror\addon\mode\multiplex.js" />
+    <Content Include="lib\codemirror\addon\mode\multiplex_test.js" />
+    <Content Include="lib\codemirror\addon\mode\overlay.js" />
+    <Content Include="lib\codemirror\addon\mode\simple.js" />
+    <Content Include="lib\codemirror\addon\runmode\colorize.js" />
+    <Content Include="lib\codemirror\addon\runmode\runmode-standalone.js" />
+    <Content Include="lib\codemirror\addon\runmode\runmode.js" />
+    <Content Include="lib\codemirror\addon\runmode\runmode.node.js" />
+    <Content Include="lib\codemirror\addon\scroll\annotatescrollbar.js" />
+    <Content Include="lib\codemirror\addon\scroll\scrollpastend.js" />
+    <Content Include="lib\codemirror\addon\scroll\simplescrollbars.css" />
+    <Content Include="lib\codemirror\addon\scroll\simplescrollbars.js" />
+    <Content Include="lib\codemirror\addon\search\match-highlighter.js" />
+    <Content Include="lib\codemirror\addon\search\matchesonscrollbar.css" />
+    <Content Include="lib\codemirror\addon\search\matchesonscrollbar.js" />
+    <Content Include="lib\codemirror\addon\search\search.js" />
+    <Content Include="lib\codemirror\addon\search\searchcursor.js" />
+    <Content Include="lib\codemirror\addon\selection\active-line.js" />
+    <Content Include="lib\codemirror\addon\selection\mark-selection.js" />
+    <Content Include="lib\codemirror\addon\selection\selection-pointer.js" />
+    <Content Include="lib\codemirror\addon\tern\tern.css" />
+    <Content Include="lib\codemirror\addon\tern\tern.js" />
+    <Content Include="lib\codemirror\addon\tern\worker.js" />
+    <Content Include="lib\codemirror\addon\wrap\hardwrap.js" />
+    <Content Include="lib\codemirror\codemirror.min.css" />
+    <Content Include="lib\codemirror\codemirror.min.js" />
+    <Content Include="lib\codemirror\lib\codemirror.css" />
+    <Content Include="lib\codemirror\lib\codemirror.js" />
+    <Content Include="lib\codemirror\modes.min.js" />
+    <Content Include="lib\codemirror\mode\apl\apl.js" />
+    <Content Include="lib\codemirror\mode\apl\index.html" />
+    <Content Include="lib\codemirror\mode\asterisk\asterisk.js" />
+    <Content Include="lib\codemirror\mode\asterisk\index.html" />
+    <Content Include="lib\codemirror\mode\clike\clike.js" />
+    <Content Include="lib\codemirror\mode\clike\index.html" />
+    <Content Include="lib\codemirror\mode\clike\scala.html" />
+    <Content Include="lib\codemirror\mode\clojure\clojure.js" />
+    <Content Include="lib\codemirror\mode\clojure\index.html" />
+    <Content Include="lib\codemirror\mode\cobol\cobol.js" />
+    <Content Include="lib\codemirror\mode\cobol\index.html" />
+    <Content Include="lib\codemirror\mode\coffeescript\coffeescript.js" />
+    <Content Include="lib\codemirror\mode\coffeescript\index.html" />
+    <Content Include="lib\codemirror\mode\commonlisp\commonlisp.js" />
+    <Content Include="lib\codemirror\mode\commonlisp\index.html" />
+    <Content Include="lib\codemirror\mode\css\css.js" />
+    <Content Include="lib\codemirror\mode\css\index.html" />
+    <Content Include="lib\codemirror\mode\css\less.html" />
+    <Content Include="lib\codemirror\mode\css\less_test.js" />
+    <Content Include="lib\codemirror\mode\css\scss.html" />
+    <Content Include="lib\codemirror\mode\css\scss_test.js" />
+    <Content Include="lib\codemirror\mode\css\test.js" />
+    <Content Include="lib\codemirror\mode\cypher\cypher.js" />
+    <Content Include="lib\codemirror\mode\cypher\index.html" />
+    <Content Include="lib\codemirror\mode\dart\dart.js" />
+    <Content Include="lib\codemirror\mode\dart\index.html" />
+    <Content Include="lib\codemirror\mode\diff\diff.js" />
+    <Content Include="lib\codemirror\mode\diff\index.html" />
+    <Content Include="lib\codemirror\mode\django\django.js" />
+    <Content Include="lib\codemirror\mode\django\index.html" />
+    <Content Include="lib\codemirror\mode\dockerfile\dockerfile.js" />
+    <Content Include="lib\codemirror\mode\dockerfile\index.html" />
+    <Content Include="lib\codemirror\mode\dtd\dtd.js" />
+    <Content Include="lib\codemirror\mode\dtd\index.html" />
+    <Content Include="lib\codemirror\mode\dylan\dylan.js" />
+    <Content Include="lib\codemirror\mode\dylan\index.html" />
+    <Content Include="lib\codemirror\mode\d\d.js" />
+    <Content Include="lib\codemirror\mode\d\index.html" />
+    <Content Include="lib\codemirror\mode\ebnf\ebnf.js" />
+    <Content Include="lib\codemirror\mode\ebnf\index.html" />
+    <Content Include="lib\codemirror\mode\ecl\ecl.js" />
+    <Content Include="lib\codemirror\mode\ecl\index.html" />
+    <Content Include="lib\codemirror\mode\eiffel\eiffel.js" />
+    <Content Include="lib\codemirror\mode\eiffel\index.html" />
+    <Content Include="lib\codemirror\mode\erlang\erlang.js" />
+    <Content Include="lib\codemirror\mode\erlang\index.html" />
+    <Content Include="lib\codemirror\mode\forth\forth.js" />
+    <Content Include="lib\codemirror\mode\forth\index.html" />
+    <Content Include="lib\codemirror\mode\fortran\fortran.js" />
+    <Content Include="lib\codemirror\mode\fortran\index.html" />
+    <Content Include="lib\codemirror\mode\gas\gas.js" />
+    <Content Include="lib\codemirror\mode\gas\index.html" />
+    <Content Include="lib\codemirror\mode\gfm\gfm.js" />
+    <Content Include="lib\codemirror\mode\gfm\index.html" />
+    <Content Include="lib\codemirror\mode\gfm\test.js" />
+    <Content Include="lib\codemirror\mode\gherkin\gherkin.js" />
+    <Content Include="lib\codemirror\mode\gherkin\index.html" />
+    <Content Include="lib\codemirror\mode\go\go.js" />
+    <Content Include="lib\codemirror\mode\go\index.html" />
+    <Content Include="lib\codemirror\mode\groovy\groovy.js" />
+    <Content Include="lib\codemirror\mode\groovy\index.html" />
+    <Content Include="lib\codemirror\mode\haml\haml.js" />
+    <Content Include="lib\codemirror\mode\haml\index.html" />
+    <Content Include="lib\codemirror\mode\haml\test.js" />
+    <Content Include="lib\codemirror\mode\haskell\haskell.js" />
+    <Content Include="lib\codemirror\mode\haskell\index.html" />
+    <Content Include="lib\codemirror\mode\haxe\haxe.js" />
+    <Content Include="lib\codemirror\mode\haxe\index.html" />
+    <Content Include="lib\codemirror\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="lib\codemirror\mode\htmlembedded\index.html" />
+    <Content Include="lib\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="lib\codemirror\mode\htmlmixed\index.html" />
+    <Content Include="lib\codemirror\mode\http\http.js" />
+    <Content Include="lib\codemirror\mode\http\index.html" />
+    <Content Include="lib\codemirror\mode\idl\idl.js" />
+    <Content Include="lib\codemirror\mode\idl\index.html" />
+    <Content Include="lib\codemirror\mode\index.html" />
+    <Content Include="lib\codemirror\mode\jade\index.html" />
+    <Content Include="lib\codemirror\mode\jade\jade.js" />
+    <Content Include="lib\codemirror\mode\javascript\index.html" />
+    <Content Include="lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="lib\codemirror\mode\javascript\json-ld.html" />
+    <Content Include="lib\codemirror\mode\javascript\test.js" />
+    <Content Include="lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="lib\codemirror\mode\jinja2\index.html" />
+    <Content Include="lib\codemirror\mode\jinja2\jinja2.js" />
+    <Content Include="lib\codemirror\mode\julia\index.html" />
+    <Content Include="lib\codemirror\mode\julia\julia.js" />
+    <Content Include="lib\codemirror\mode\kotlin\index.html" />
+    <Content Include="lib\codemirror\mode\kotlin\kotlin.js" />
+    <Content Include="lib\codemirror\mode\livescript\index.html" />
+    <Content Include="lib\codemirror\mode\livescript\livescript.js" />
+    <Content Include="lib\codemirror\mode\lua\index.html" />
+    <Content Include="lib\codemirror\mode\lua\lua.js" />
+    <Content Include="lib\codemirror\mode\markdown\index.html" />
+    <Content Include="lib\codemirror\mode\markdown\markdown.js" />
+    <Content Include="lib\codemirror\mode\markdown\test.js" />
+    <Content Include="lib\codemirror\mode\meta.js" />
+    <Content Include="lib\codemirror\mode\mirc\index.html" />
+    <Content Include="lib\codemirror\mode\mirc\mirc.js" />
+    <Content Include="lib\codemirror\mode\mllike\index.html" />
+    <Content Include="lib\codemirror\mode\mllike\mllike.js" />
+    <Content Include="lib\codemirror\mode\modelica\index.html" />
+    <Content Include="lib\codemirror\mode\modelica\modelica.js" />
+    <Content Include="lib\codemirror\mode\nginx\index.html" />
+    <Content Include="lib\codemirror\mode\nginx\nginx.js" />
+    <Content Include="lib\codemirror\mode\ntriples\index.html" />
+    <Content Include="lib\codemirror\mode\ntriples\ntriples.js" />
+    <Content Include="lib\codemirror\mode\octave\index.html" />
+    <Content Include="lib\codemirror\mode\octave\octave.js" />
+    <Content Include="lib\codemirror\mode\pascal\index.html" />
+    <Content Include="lib\codemirror\mode\pascal\pascal.js" />
+    <Content Include="lib\codemirror\mode\pegjs\index.html" />
+    <Content Include="lib\codemirror\mode\pegjs\pegjs.js" />
+    <Content Include="lib\codemirror\mode\perl\index.html" />
+    <Content Include="lib\codemirror\mode\perl\perl.js" />
+    <Content Include="lib\codemirror\mode\php\index.html" />
+    <Content Include="lib\codemirror\mode\php\php.js" />
+    <Content Include="lib\codemirror\mode\php\test.js" />
+    <Content Include="lib\codemirror\mode\pig\index.html" />
+    <Content Include="lib\codemirror\mode\pig\pig.js" />
+    <Content Include="lib\codemirror\mode\properties\index.html" />
+    <Content Include="lib\codemirror\mode\properties\properties.js" />
+    <Content Include="lib\codemirror\mode\puppet\index.html" />
+    <Content Include="lib\codemirror\mode\puppet\puppet.js" />
+    <Content Include="lib\codemirror\mode\python\index.html" />
+    <Content Include="lib\codemirror\mode\python\python.js" />
+    <Content Include="lib\codemirror\mode\q\index.html" />
+    <Content Include="lib\codemirror\mode\q\q.js" />
+    <Content Include="lib\codemirror\mode\rpm\changes\index.html" />
+    <Content Include="lib\codemirror\mode\rpm\index.html" />
+    <Content Include="lib\codemirror\mode\rpm\rpm.js" />
+    <Content Include="lib\codemirror\mode\rst\index.html" />
+    <Content Include="lib\codemirror\mode\rst\rst.js" />
+    <Content Include="lib\codemirror\mode\ruby\index.html" />
+    <Content Include="lib\codemirror\mode\ruby\ruby.js" />
+    <Content Include="lib\codemirror\mode\ruby\test.js" />
+    <Content Include="lib\codemirror\mode\rust\index.html" />
+    <Content Include="lib\codemirror\mode\rust\rust.js" />
+    <Content Include="lib\codemirror\mode\r\index.html" />
+    <Content Include="lib\codemirror\mode\r\r.js" />
+    <Content Include="lib\codemirror\mode\sass\index.html" />
+    <Content Include="lib\codemirror\mode\sass\sass.js" />
+    <Content Include="lib\codemirror\mode\scheme\index.html" />
+    <Content Include="lib\codemirror\mode\scheme\scheme.js" />
+    <Content Include="lib\codemirror\mode\shell\index.html" />
+    <Content Include="lib\codemirror\mode\shell\shell.js" />
+    <Content Include="lib\codemirror\mode\shell\test.js" />
+    <Content Include="lib\codemirror\mode\sieve\index.html" />
+    <Content Include="lib\codemirror\mode\sieve\sieve.js" />
+    <Content Include="lib\codemirror\mode\slim\index.html" />
+    <Content Include="lib\codemirror\mode\slim\slim.js" />
+    <Content Include="lib\codemirror\mode\slim\test.js" />
+    <Content Include="lib\codemirror\mode\smalltalk\index.html" />
+    <Content Include="lib\codemirror\mode\smalltalk\smalltalk.js" />
+    <Content Include="lib\codemirror\mode\smartymixed\index.html" />
+    <Content Include="lib\codemirror\mode\smartymixed\smartymixed.js" />
+    <Content Include="lib\codemirror\mode\smarty\index.html" />
+    <Content Include="lib\codemirror\mode\smarty\smarty.js" />
+    <Content Include="lib\codemirror\mode\solr\index.html" />
+    <Content Include="lib\codemirror\mode\solr\solr.js" />
+    <Content Include="lib\codemirror\mode\soy\index.html" />
+    <Content Include="lib\codemirror\mode\soy\soy.js" />
+    <Content Include="lib\codemirror\mode\sparql\index.html" />
+    <Content Include="lib\codemirror\mode\sparql\sparql.js" />
+    <Content Include="lib\codemirror\mode\spreadsheet\index.html" />
+    <Content Include="lib\codemirror\mode\spreadsheet\spreadsheet.js" />
+    <Content Include="lib\codemirror\mode\sql\index.html" />
+    <Content Include="lib\codemirror\mode\sql\sql.js" />
+    <Content Include="lib\codemirror\mode\stex\index.html" />
+    <Content Include="lib\codemirror\mode\stex\stex.js" />
+    <Content Include="lib\codemirror\mode\stex\test.js" />
+    <Content Include="lib\codemirror\mode\stylus\index.html" />
+    <Content Include="lib\codemirror\mode\stylus\stylus.js" />
+    <Content Include="lib\codemirror\mode\tcl\index.html" />
+    <Content Include="lib\codemirror\mode\tcl\tcl.js" />
+    <Content Include="lib\codemirror\mode\textile\index.html" />
+    <Content Include="lib\codemirror\mode\textile\test.js" />
+    <Content Include="lib\codemirror\mode\textile\textile.js" />
+    <Content Include="lib\codemirror\mode\tiddlywiki\index.html" />
+    <Content Include="lib\codemirror\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="lib\codemirror\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="lib\codemirror\mode\tiki\index.html" />
+    <Content Include="lib\codemirror\mode\tiki\tiki.css" />
+    <Content Include="lib\codemirror\mode\tiki\tiki.js" />
+    <Content Include="lib\codemirror\mode\toml\index.html" />
+    <Content Include="lib\codemirror\mode\toml\toml.js" />
+    <Content Include="lib\codemirror\mode\tornado\index.html" />
+    <Content Include="lib\codemirror\mode\tornado\tornado.js" />
+    <Content Include="lib\codemirror\mode\turtle\index.html" />
+    <Content Include="lib\codemirror\mode\turtle\turtle.js" />
+    <Content Include="lib\codemirror\mode\vbscript\index.html" />
+    <Content Include="lib\codemirror\mode\vbscript\vbscript.js" />
+    <Content Include="lib\codemirror\mode\vb\index.html" />
+    <Content Include="lib\codemirror\mode\vb\vb.js" />
+    <Content Include="lib\codemirror\mode\velocity\index.html" />
+    <Content Include="lib\codemirror\mode\velocity\velocity.js" />
+    <Content Include="lib\codemirror\mode\verilog\index.html" />
+    <Content Include="lib\codemirror\mode\verilog\test.js" />
+    <Content Include="lib\codemirror\mode\verilog\verilog.js" />
+    <Content Include="lib\codemirror\mode\xml\index.html" />
+    <Content Include="lib\codemirror\mode\xml\test.js" />
+    <Content Include="lib\codemirror\mode\xml\xml.js" />
+    <Content Include="lib\codemirror\mode\xquery\index.html" />
+    <Content Include="lib\codemirror\mode\xquery\test.js" />
+    <Content Include="lib\codemirror\mode\xquery\xquery.js" />
+    <Content Include="lib\codemirror\mode\yaml\index.html" />
+    <Content Include="lib\codemirror\mode\yaml\yaml.js" />
+    <Content Include="lib\codemirror\mode\z80\index.html" />
+    <Content Include="lib\codemirror\mode\z80\z80.js" />
+    <Content Include="lib\codemirror\theme\3024-day.css" />
+    <Content Include="lib\codemirror\theme\3024-night.css" />
+    <Content Include="lib\codemirror\theme\ambiance-mobile.css" />
+    <Content Include="lib\codemirror\theme\ambiance.css" />
+    <Content Include="lib\codemirror\theme\base16-dark.css" />
+    <Content Include="lib\codemirror\theme\base16-light.css" />
+    <Content Include="lib\codemirror\theme\blackboard.css" />
+    <Content Include="lib\codemirror\theme\cobalt.css" />
+    <Content Include="lib\codemirror\theme\colorforth.css" />
+    <Content Include="lib\codemirror\theme\eclipse.css" />
+    <Content Include="lib\codemirror\theme\elegant.css" />
+    <Content Include="lib\codemirror\theme\erlang-dark.css" />
+    <Content Include="lib\codemirror\theme\lesser-dark.css" />
+    <Content Include="lib\codemirror\theme\mbo.css" />
+    <Content Include="lib\codemirror\theme\mdn-like.css" />
+    <Content Include="lib\codemirror\theme\midnight.css" />
+    <Content Include="lib\codemirror\theme\monokai.css" />
+    <Content Include="lib\codemirror\theme\neat.css" />
+    <Content Include="lib\codemirror\theme\neo.css" />
+    <Content Include="lib\codemirror\theme\night.css" />
+    <Content Include="lib\codemirror\theme\paraiso-dark.css" />
+    <Content Include="lib\codemirror\theme\paraiso-light.css" />
+    <Content Include="lib\codemirror\theme\pastel-on-dark.css" />
+    <Content Include="lib\codemirror\theme\rubyblue.css" />
+    <Content Include="lib\codemirror\theme\solarized.css" />
+    <Content Include="lib\codemirror\theme\the-matrix.css" />
+    <Content Include="lib\codemirror\theme\tomorrow-night-bright.css" />
+    <Content Include="lib\codemirror\theme\tomorrow-night-eighties.css" />
+    <Content Include="lib\codemirror\theme\twilight.css" />
+    <Content Include="lib\codemirror\theme\vibrant-ink.css" />
+    <Content Include="lib\codemirror\theme\xq-dark.css" />
+    <Content Include="lib\codemirror\theme\xq-light.css" />
+    <Content Include="lib\codemirror\theme\zenburn.css" />
+    <Content Include="lib\flowchart.min.js" />
+    <Content Include="lib\jquery.flowchart.min.js" />
+    <Content Include="lib\marked.min.js" />
+    <Content Include="lib\prettify.min.js" />
+    <Content Include="lib\raphael.min.js" />
+    <Content Include="lib\sequence-diagram.min.js" />
+    <Content Include="lib\underscore.min.js" />
     <Content Include="reg.aspx" />
+    <Content Include="saveOrUpdateArticle.aspx" />
     <Content Include="user.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
+    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddArticle.aspx.cs">
+      <DependentUpon>AddArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddArticle.aspx.designer.cs">
+      <DependentUpon>AddArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reg.aspx.cs">
       <DependentUpon>reg.aspx</DependentUpon>
@@ -85,6 +438,13 @@
     </Compile>
     <Compile Include="reg.aspx.designer.cs">
       <DependentUpon>reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="saveOrUpdateArticle.aspx.cs">
+      <DependentUpon>saveOrUpdateArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="saveOrUpdateArticle.aspx.designer.cs">
+      <DependentUpon>saveOrUpdateArticle.aspx</DependentUpon>
     </Compile>
     <Compile Include="user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>
@@ -107,9 +467,31 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="user.Master" />
+    <Content Include="lib\codemirror\AUTHORS" />
+    <Content Include="lib\codemirror\bower.json" />
+    <Content Include="lib\codemirror\LICENSE" />
+    <Content Include="lib\codemirror\package.json" />
+    <Content Include="lib\codemirror\README.md" />
+    <Content Include="fonts\editormd-logo.eot" />
+    <Content Include="fonts\editormd-logo.ttf" />
+    <Content Include="fonts\editormd-logo.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Handler1.ashx" />
+    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
