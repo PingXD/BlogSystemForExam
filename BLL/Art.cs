@@ -5,15 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Model;
 using DAL;
+using System.Data;
 namespace BLL
 {
-    public class Ait
+    public class Art
     {
         /// <summary>
         /// 传入art 储存文章内容
         /// </summary>
         /// <param name="articles"></param>
         /// <returns></returns>
-        public static int SaveAir( articles articles) => DAL.Air.Add(articles);
+        public static int SaveAir( articles articles) => DAL.Ait.Add(articles);
+
+        /// <summary>
+        /// 获取全部文章,返回dataset
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable GetAitAll(int id) => Ait.GetArtALL(id);
     }
 }

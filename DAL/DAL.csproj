@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Air.cs" />
+    <Compile Include="Ait.cs" />
     <Compile Include="cookie.cs" />
     <Compile Include="CookieChecker.cs" />
     <Compile Include="CourseService.cs" />
