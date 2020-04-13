@@ -44,6 +44,7 @@
     <Compile Include="Art.cs" />
     <Compile Include="CookieChecker.cs" />
     <Compile Include="CreatMd5.cs" />
+    <Compile Include="GetPnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserManage.cs" />
   </ItemGroup>

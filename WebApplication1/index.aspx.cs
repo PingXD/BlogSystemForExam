@@ -15,6 +15,8 @@ namespace WebApplication1
         bool yn = false; 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label3.Text = Application["total"].ToString();
+            Label2.Text = Application["online"].ToString();
             string uid = Request.QueryString["uid"];
             yn = DAL.CookieChecker.CookieCheacker(uid, "user");
 
@@ -26,7 +28,7 @@ namespace WebApplication1
             art.article_content = dr["article_content"].ToString();
             art.article_date =Convert.ToDateTime( dr["article_date"]);
             t1.InnerHtml = art.article_title;
-            t1
+            
             if (uid!=null)
             {
                 if (yn == true)

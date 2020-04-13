@@ -107,6 +107,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style25">
+                        在线人数：<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        共计访问人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                     </td>
                 </tr>
                 <tr>

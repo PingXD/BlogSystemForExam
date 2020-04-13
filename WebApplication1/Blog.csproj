@@ -86,6 +86,7 @@
     <Content Include="css\style.css" />
     <Content Include="fonts\editormd-logo.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
     <Content Include="images\loading%402x.gif" />
     <Content Include="images\loading%403x.gif" />
     <Content Include="images\loading.gif" />
@@ -467,6 +468,9 @@
     </Compile>
     <Compile Include="GetPostEditAll.ashx.cs">
       <DependentUpon>GetPostEditAll.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="PostALLAit.ashx.cs">
       <DependentUpon>PostALLAit.ashx</DependentUpon>

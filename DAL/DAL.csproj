@@ -55,6 +55,7 @@
     <Compile Include="CourseService.cs" />
     <Compile Include="dbhelper.cs" />
     <Compile Include="GetBlogTitle.cs" />
+    <Compile Include="GetView.cs" />
     <Compile Include="Md5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService.cs" />

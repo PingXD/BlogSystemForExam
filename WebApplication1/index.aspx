@@ -32,15 +32,17 @@
         </style>
 	</head>
 	<body>
+		<form id="form1" runat="server">
 		<div id="pagepbt">
 			<header class="site-headerpbt" id="mastheadpbt" role="banner">
-				<div class="site-brandingpbt">
+				在线人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                z<div class="site-brandingpbt">
 					<div class="headersec section" id="headersec">
 						<div class="widget Header" data-version="1" id="Header1">
 							<div id="header-inner">
 								<div class="titlewrapper">
 									<h2 class="site-titlenbt">
-										<a href="#">Dong &nbsp; C</a>
+										<a href="#">P<span class="auto-style1">ing</span></a>X
 									</h2>
 								</div>
 								<h2 class="site-descriptionnbt">Hello World</h2>
@@ -64,9 +66,9 @@
 						</ul>
 					</div>
 				</nav>
+&nbsp;总计访问：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
 			</header>
 			<div class="site-contentpbt" id="contentpbt">
-				<form id="js_search" action="http://javaweb.org/" method="post">
 					<div class="content-areapbt" id="primarypbt">
 						<div class="site-mainpbt" id="mainpbt" role="main">
 							<div class="mainblogsec section" id="mainblogsec">
@@ -109,8 +111,7 @@
 														<div class="post-header-line-1"></div>
 														<div class="post-body entry-content">
 															<div id="summary">
-																<div class="separator" style="clear: both;">自从Oracle把Java EE捐给Apache后新版本的JavaEE也就正式的改名为了"Jakarta®EE"。
-																</div>
+																<div class="separator" style="clear: both;">0000000</div>
 															</div>
 															<div style="clear: both;"></div>
 															<div style="clear: both;"></div>
@@ -165,10 +166,7 @@
 											</a>
 										</li>
 										<li>[365cent]
-											<a dir="ltr" href="#">
-												围观大佬~ 现在点外卖还送吗
-											</a>
-										</li>
+											评论</li>
 									</ul>
 								</div>
 							</div>
@@ -209,5 +207,6 @@
 								</div>
 							</div>
 						</div>
+	    </form>
 	</body>
 </html>
