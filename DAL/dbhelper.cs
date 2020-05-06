@@ -10,7 +10,7 @@ namespace DAL
 {
     public class dbhelper
     {
-        static string constr = "server=127.0.0.1;port=3306;user=root;database=blog;CharSet=utf8";
+        static string constr = "server=127.0.0.1;port=3306;user=root;password=123456;database=blog;CharSet=utf8";
         /// <summary>
         /// 执行增删改操作的方法，返回受影响的行数
         /// </summary>

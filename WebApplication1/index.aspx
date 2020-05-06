@@ -83,7 +83,7 @@
 													<article class="post hentry">
 														<header class="entry-header">
 															<h1 class="post-title entry-title" itemprop="name">
-																<a href="http://javaweb.org/?p=1876" runat="server" id="t1"></a>
+																<a href="" runat="server" id="t1"></a>
 															</h1>
 															<div class="entry-metapbt">
 																<span class="post-author vcard">
@@ -94,11 +94,7 @@
 																		</a>
 																	</span>&nbsp;&nbsp;&nbsp;
 																	<i class="fa fa-calendar"></i>&nbsp;
-																	<a class="timestamp-link" href="http://javaweb.org/#" rel="bookmark">
-																		<span class="published updated" itemprop="datePublished"runat="server" id="t1Time">
-																			2020-03-05 19:04:35
-																		</span>
-																	</a>&nbsp;&nbsp;&nbsp;
+
 																	<i class="fa fa-folder-o"></i>&nbsp;
 																	<a href="http://javaweb.org/?cat=3" rel="tag">Java</a>&nbsp;&nbsp;&nbsp;
 																	<i class="fa fa-comments"></i>&nbsp;
@@ -177,11 +173,11 @@
 									<div class="widget-content list-label-widget-content">
 										<ul>
 											<li>
-												<a dir="ltr" href="http://javaweb.org/?cat=3">Java</a>
+												<a dir="ltr" href="">Java</a>
 												<span dir="ltr">(68)</span>
 											</li>
 											<li>
-												<a dir="ltr" href="http://javaweb.org/?cat=14">Documents</a>
+												<a dir="ltr" href="">Documents</a>
 												<span dir="ltr">(39)</span>
 											</li>
 										</ul>
@@ -190,22 +186,7 @@
 								</div>
 							</div>
 
-							<div class="sidebarrightsec section" id="sidebarrightsec">
-								<div class="widget Label" data-version="1" id="Label1">
-									<h2>友情链接</h2>
-									<div class="widget-content list-label-widget-content">
-										<ul>
-											<li>
-												<a dir="ltr" href="http://www.iswin.org/">随风'blog</a>
-											</li>
-											<li>
-												<a dir="ltr" href="http://www.0day5.com/">0day5</a>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 	    </form>
 	</body>
