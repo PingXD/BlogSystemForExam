@@ -27,5 +27,12 @@ namespace DAL
             ds = dbhelper.GetTable(sql);
             return ds;
         }
+        public static DataTable GetArtALLA()
+        {
+            string sql = string.Format("SELECT * from articles");
+            DataTable ds = new DataTable();
+            ds = dbhelper.GetTable(sql);
+            return ds;
+        }
     }
 }

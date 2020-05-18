@@ -12,18 +12,45 @@
 		<script src="lib/jquery.flowchart.min.js"></script>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
 		<script>
-        $.ajax({
-            type: "POST",
-            url: 'PostALLAit.ashx',
-            data: { 'article_idd': 23 },
-            dataType: 'json',
-            //contentType:"application/json",
-            cache: false,
-            success: function (data) {
+            var ajaxRquest = $.ajax({
+
+
+                type: "POST",
+                url: 'PostALLAit.ashx',
+                data: { 'article_idd': "全部" },
+				dataType: 'json',
+                
+                //contentType:"application/json",
+
+
+                success: function (data) {
+                    //var arr = new Array();
+                    //arr.push(data);
+                    //var a = data;
+                    //console.log(data);
+
+
+
+                    //var result = [];
+                    //var obj = {};
+                    //for (var i = 0; i < data.length; i++) {
+                    //    if (!obj[data[i].article_title]) {
+                    //        result.push(data[i]);
+                    //        obj[data[i].article_title] = true;
+                    //    }
+                    //}
+                    //console.log(result);
+                    for (id = 1; id++; id<=data.length) {
+						console.log(data[id - 2].article_title);
+						var txt1 = "<p><a href='detailed.html?id="+(id-1)+"'>" + data[id - 2].article_title + id + " </a></p>";
+                        
+                        $(".entry-header").append(txt1 +'<br>');
+                    }
+
+
 
                 }
-            
-        });
+            });
 		</script>
 	    <style type="text/css">
             .auto-style1 {
@@ -82,50 +109,17 @@
 												<div class="post-outer">
 													<article class="post hentry">
 														<header class="entry-header">
-															<h1 class="post-title entry-title" itemprop="name">
-																<a href="" runat="server" id="t1"></a>
-															</h1>
-															<div class="entry-metapbt">
-																<span class="post-author vcard">
-																	<i class="fa fa-user"></i>&nbsp;
-																	<span class="fn" itemprop="author">
-																		<a class="g-profile" href="http://javaweb.org/?uid=1" rel="author" title="作者信息">
-																			<span itemprop="name">yzmm</span>
-																		</a>
-																	</span>&nbsp;&nbsp;&nbsp;
-																	<i class="fa fa-calendar"></i>&nbsp;
-
-																	<i class="fa fa-folder-o"></i>&nbsp;
-																	<a href="http://javaweb.org/?cat=3" rel="tag">Java</a>&nbsp;&nbsp;&nbsp;
-																	<i class="fa fa-comments"></i>&nbsp;
-																	<a href="http://javaweb.org/#" onclick="">0 comments</a>&nbsp;&nbsp;&nbsp;
-																	<i class="fa fa-eye"></i>&nbsp;
-																	<a href="http://javaweb.org/#" onclick="">319</a>
-																</span>
-															</div>
+															<asp:GridView ID="GridView1" runat="server" Height="849px" Width="469px">
+                                                            </asp:GridView>
+                                                            <div>	</div>
 														</header>
-														<div class="post-header-line-1"></div>
-														<div class="post-body entry-content">
-															<div id="summary">
-																<div class="separator" style="clear: both;">0000000</div>
-															</div>
-															<div style="clear: both;"></div>
-															<div style="clear: both;"></div>
-														</div>
-														<footer class="entry-footerpbt">
-															<div class="readMoreLinkpbt">
-																<a href="http://javaweb.org/?p=1876">Read More<i class="fa spaceLeft fa-angle-double-right"></i></a>
-															</div>
+                                                        <footer class="entry-footerpbt">
 														</footer>
 													</article>
-													<div style="clear: both;"></div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div style="clear: both;"></div>
-									<div class="blog-pager" id="blog-pager">
-										<input type="hidden" id="js_page" name="page" value="1">
+                                        <input type="hidden" id="js_page" name="page" value="1">
 										<script>
 											function search(page) 
 											{

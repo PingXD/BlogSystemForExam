@@ -10,3 +10,9 @@ D:\GITHUB\BlogAsp\Model\obj\Debug\Model.csprojAssemblyReference.cache
 D:\GITHUB\BlogAsp\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\GITHUB\BlogAsp\Model\obj\Debug\Model.dll
 D:\GITHUB\BlogAsp\Model\obj\Debug\Model.pdb
+D:\Documents\GitHub\BlogAsp\Model\bin\Debug\Model.dll
+D:\Documents\GitHub\BlogAsp\Model\bin\Debug\Model.pdb
+D:\Documents\GitHub\BlogAsp\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Documents\GitHub\BlogAsp\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\BlogAsp\Model\obj\Debug\Model.dll
+D:\Documents\GitHub\BlogAsp\Model\obj\Debug\Model.pdb

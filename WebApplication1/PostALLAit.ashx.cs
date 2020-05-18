@@ -17,13 +17,47 @@ namespace WebApplication1
         public void ProcessRequest(HttpContext context)
         {
 
-            //int id = Convert.ToInt32( context.Request.Form["article_idd"]);
-            //DataTable ds = BLL.Art.GetAitAll(id);
-            ////context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
+            int id;
+            DataTable ds=null;
+            string get = context.Request.Form["article_idd"];
+            if (get=="全部")
+            {
+                
+                ds = BLL.Art.GetAitAllA();
+                context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
+            }
+            else
+            {
+
+                articles art = new articles();
+                if (get!="")
+                {
+                    ds = Art.GetAitAll(Convert.ToInt32(get));
+                    DataRow dr = ds.Rows[0];
+                    art.article_title = dr["article_title"].ToString();
+                    art.article_content = dr["article_content"].ToString();
+                    context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));
+
+                }
+                    
+                
+                    
+                   
+                
+
+
+                //context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));
+            }
+
             //articles art = new articles();
-            //DataRow dr = ds.Rows[0];
-            //art.article_title = dr["article_title"].ToString();
-            //art.article_content = dr["article_content"].ToString();
+            //if (ds !=null)
+            //{
+            //    DataRow dr = ds.Rows[0];
+            //    art.article_title = dr["article_title"].ToString();
+            //    art.article_content = dr["article_content"].ToString();
+            //}
+
+
             //context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));
 
 

@@ -87,6 +87,9 @@
     <Content Include="fonts\editormd-logo.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="HtmlPage2.html" />
+    <Content Include="detailed.html" />
     <Content Include="images\loading%402x.gif" />
     <Content Include="images\loading%403x.gif" />
     <Content Include="images\loading.gif" />
@@ -119,6 +122,7 @@
     <Content Include="js\editormd.js" />
     <Content Include="js\editormd.min.js" />
     <Content Include="js\Gulpfile.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="lib\codemirror\addons.min.js" />
     <Content Include="lib\codemirror\addon\comment\comment.js" />
     <Content Include="lib\codemirror\addon\comment\continuecomment.js" />
@@ -457,6 +461,7 @@
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddArticle.aspx.cs">
@@ -510,6 +515,13 @@
     </Compile>
     <Compile Include="WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
