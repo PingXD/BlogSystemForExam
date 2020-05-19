@@ -15,7 +15,8 @@ namespace WebApplication1
         bool yn = false; 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label3.Text = Application["num"].ToString();
+            Label2.Text = Application["online"].ToString();
             string uid = Request.QueryString["uid"];
             yn = DAL.CookieChecker.CookieCheacker(uid, "user");
 

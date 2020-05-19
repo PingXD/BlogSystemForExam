@@ -13,7 +13,7 @@
 
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="js/editormd.js"></script>
-
+    <script src="js/base64.min.js"></script>
     <script src="lib/marked.min.js"></script>
     <script src="lib/prettify.min.js"></script>
     <script src="lib/raphael.min.js"></script>
@@ -156,27 +156,33 @@
             doSubmit: function () {//提交
                 if (writeArticle.doCheck()) {
                     //debugger;
-                    var title = $("#articleTitle").val();
-                    var content = $("#articleContent").val();
-                    var typeId = $("#articleCategory").val();
-                    $.ajax({
-                        type: "POST",
-                        url: 'GetPostEditAll.ashx',
-                        data: { 'article_title': title, 'article_content': content, 'typeId': typeId },
-                        dataType: 'json',
-                        //contentType:"application/json",
-                        cache: false,
-                        success: function (data) {
-                            //debugger;
-                            if ("success" == data.result) {
-                                //这里代表的是 json的result值为success
-                                alert("保存成功!");
-                                setTimeout(function () {
-                                    window.close();
-                                }, 3000);
+                    if ($("#articleCategory").val()==0) {
+                        alert("请选择文章分类!");
+                    } else {
+                        var title = $("#articleTitle").val();
+                        var content = $("#articleContent").val();
+                        var typeId = $("#articleCategory").find("option:selected").text();
+                        $.ajax({
+                            type: "POST",
+                            url: 'GetPostEditAll.ashx',
+                            data: {
+                                'article_title': title, 'article_content': Base64.encode(content), 'article_class': typeId },
+                            dataType: 'json',
+                            //contentType:"application/json",
+                            cache: false,
+                            success: function (data) {
+                                //debugger;
+                                if ("success" == data.result) {
+                                    //这里代表的是 json的result值为success
+                                    alert("保存成功!");
+                                    setTimeout(function () {
+                                        window.close();
+                                    }, 3000);
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+
                 }
             },
             doCheck: function () {//校验

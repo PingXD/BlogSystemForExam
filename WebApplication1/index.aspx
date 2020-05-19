@@ -11,6 +11,18 @@
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="lib/jquery.flowchart.min.js"></script>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
+				<style type="text/css">
+			.left{
+				margin-left: auto;
+				width: 50%;
+				float: left;
+			}
+			.right{
+				margin-right: auto;
+				width: 50%;
+				float: left;
+			}
+		</style>
 		<script>
             var ajaxRquest = $.ajax({
 
@@ -42,9 +54,9 @@
                     //console.log(result);
                     for (id = 1; id++; id<=data.length) {
 						console.log(data[id - 2].article_title);
-						var txt1 = "<p><a href='detailed.html?id="+(id-1)+"'>" + data[id - 2].article_title + id + " </a></p>";
-                        
-                        $(".entry-header").append(txt1 +'<br>');
+						var biaoti = "<p><a href='detailed.html?id="+(id-1)+"'>" + data[id - 2].article_title + id + " </a></p>";
+                        console.log(data[id-2])
+                        $(".entry-header").append(biaoti +'<br>');
                     }
 
 
@@ -62,8 +74,8 @@
 		<form id="form1" runat="server">
 		<div id="pagepbt">
 			<header class="site-headerpbt" id="mastheadpbt" role="banner">
-				在线人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                z<div class="site-brandingpbt">
+				
+                <div class="site-brandingpbt">
 					<div class="headersec section" id="headersec">
 						<div class="widget Header" data-version="1" id="Header1">
 							<div id="header-inner">
@@ -93,7 +105,6 @@
 						</ul>
 					</div>
 				</nav>
-&nbsp;总计访问：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
 			</header>
 			<div class="site-contentpbt" id="contentpbt">
 					<div class="content-areapbt" id="primarypbt">
@@ -109,8 +120,6 @@
 												<div class="post-outer">
 													<article class="post hentry">
 														<header class="entry-header">
-															<asp:GridView ID="GridView1" runat="server" Height="849px" Width="469px">
-                                                            </asp:GridView>
                                                             <div>	</div>
 														</header>
                                                         <footer class="entry-footerpbt">
@@ -146,7 +155,7 @@
 							</div>
 						</div>
 						<div class="sidebarrightsec section" id="sidebarrightsec">
-							<div class="widget Label" data-version="1" id="Label1">
+							<div class="widget Label" data-version="1" id="Label0">
 								<h2>最新评论</h2>
 								<div class="widget-content list-label-widget-content">
 									<ul>
@@ -183,5 +192,13 @@
 							
 						</div>
 	    </form>
+				<div align="center">
+			<div class="left">
+				在线人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+			</div>
+			<div class="right">
+				总计访问：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+			</div>
+		</div>
 	</body>
 </html>

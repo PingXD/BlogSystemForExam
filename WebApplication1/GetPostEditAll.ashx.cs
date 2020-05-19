@@ -36,9 +36,10 @@ namespace WebApplication1
             articles art = new articles();
             art.article_title = context.Request.Form["article_title"].ToString();
             art.article_content = context.Request.Form["article_content"].ToString();
+            art.article_class = context.Request.Form["article_class"].ToString();
             int t=BLL.Art.SaveAir(art);
 
-            context.Response.Write( "{ \"result\":\"success\"}");
+            //context.Response.Write( "{ \"result\":\"success\"}");
             ////返回post的请求
             //Result res = new Result();
             //res.result = "success";

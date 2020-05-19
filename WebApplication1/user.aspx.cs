@@ -15,8 +15,7 @@ namespace WebApplication1
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label2.Text = Application["num"].ToString();
-            Label1.Text = Application["online"].ToString();
+
         }
         
         public void Button1_Click(object sender, EventArgs e)
