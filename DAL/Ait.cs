@@ -34,5 +34,12 @@ namespace DAL
             ds = dbhelper.GetTable(sql);
             return ds;
         }
+        public static DataTable GetClass()
+        {
+            string sql = "SELECT  DISTINCT article_class FROM `articles` where !(article_class is null)";
+            DataTable dt = new DataTable();
+            dt = dbhelper.GetTable(sql);
+            return dt;
+        }
     }
 }

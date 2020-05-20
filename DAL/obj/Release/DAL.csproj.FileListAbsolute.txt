@@ -1,0 +1,16 @@
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\DAL.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\DAL.pdb
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\MarkdownSharp.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\Model.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\MySql.Data.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\Google.Protobuf.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\BouncyCastle.Crypto.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\Renci.SshNet.dll
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\Model.pdb
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\MarkdownSharp.xml
+D:\Documents\GitHub\BlogAsp\DAL\bin\Release\MySql.Data.xml
+D:\Documents\GitHub\BlogAsp\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+D:\Documents\GitHub\BlogAsp\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\BlogAsp\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\Documents\GitHub\BlogAsp\DAL\obj\Release\DAL.dll
+D:\Documents\GitHub\BlogAsp\DAL\obj\Release\DAL.pdb

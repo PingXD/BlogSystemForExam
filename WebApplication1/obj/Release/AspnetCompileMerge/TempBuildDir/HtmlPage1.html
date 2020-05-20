@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<script src="js/jquery.min.js"></script>
+<script>
+    /*banner 初始化*/
+    //$(window).load(function () {
+    //    $('#slider').nivoSlider({
+    //        effect: 'random',        // 过渡效果
+    //        controlNav: false,       // 是否显示图片导航控制按钮（,2,3... ）
+    //        pauseOnHover: true,      // 鼠标县浮时是否停止动画
+    //        manualAdvance: false,    // 是否手动切换
+    //        animSpeed: 100,          // 图片过渡时间
+    //        pauseTime: 2000,         // 图片显示时间
+    //        pauseOnHover: false,
+    //        manualAdvance: false,
+    //    });
+    //});
+    //$(document).ready(function () {
+    //    $('body').show();
+    //    $('.version').text(NProgress.version);
+    //    NProgress.start();
+    //    setTimeout(function () { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+    //})
+ 
+        var ajaxRquest = $.ajax({
+
+
+            type: "POST",
+            url: 'PostALLAit.ashx',
+            data: { 'article_idd': 0 },
+            dataType: 'json',
+            //contentType:"application/json",
+
+
+            success: function (data) {
+                //var arr = new Array();
+                //arr.push(data);
+                //var a = data;
+                //console.log(data);
+               
+               
+                
+                //var result = [];
+                //var obj = {};
+                //for (var i = 0; i < data.length; i++) {
+                //    if (!obj[data[i].article_title]) {
+                //        result.push(data[i]);
+                //        obj[data[i].article_title] = true;
+                //    }
+                //}
+                //console.log(result);
+                for (id = 1; id++; id <= 10)
+                {
+                    console.log(data[id].article_title);
+                }
+                
+
+                
+            }
+        });
+    
+</script>
+
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title></title>
+        </head>
+
+<body>
+
+</body>
+
+</html>

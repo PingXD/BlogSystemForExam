@@ -23,5 +23,6 @@ namespace BLL
         /// <returns></returns>
         public static DataTable GetAitAll(int id) => Ait.GetArtALL(id);
         public static DataTable GetAitAllA() => Ait.GetArtALLA();
+        public static DataTable GetClass() => Ait.GetClass();
     }
 }

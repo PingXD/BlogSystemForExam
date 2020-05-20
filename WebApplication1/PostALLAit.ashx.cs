@@ -26,6 +26,11 @@ namespace WebApplication1
                 ds = BLL.Art.GetAitAllA();
                 context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
             }
+            else if (get =="title")
+            {
+                ds = Art.GetClass();
+                context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
+            }
             else
             {
 

@@ -1,0 +1,16 @@
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\BLL.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\BLL.pdb
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\DAL.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\Model.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\MySql.Data.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\Google.Protobuf.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\BouncyCastle.Crypto.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\Renci.SshNet.dll
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\DAL.pdb
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\Model.pdb
+D:\Documents\GitHub\BlogAsp\BLL\bin\Release\MySql.Data.xml
+D:\Documents\GitHub\BlogAsp\BLL\obj\Release\BLL.csprojAssemblyReference.cache
+D:\Documents\GitHub\BlogAsp\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\BlogAsp\BLL\obj\Release\BLL.csproj.CopyComplete
+D:\Documents\GitHub\BlogAsp\BLL\obj\Release\BLL.dll
+D:\Documents\GitHub\BlogAsp\BLL\obj\Release\BLL.pdb
