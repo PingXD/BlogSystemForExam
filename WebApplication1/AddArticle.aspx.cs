@@ -12,10 +12,11 @@ namespace WebApplication1
         bool yn = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string uid = Request.QueryString["uid"];
-            yn = DAL.CookieChecker.CookieCheacker(uid, "user");
-            if (uid != null)
+
+            string uid= Request.QueryString["uid"];
+                if (uid != null)
             {
+                yn = DAL.CookieChecker.CookieCheacker(uid, "user");
                 if (yn == true)
                 {
                     Response.Write("<script>alert('欢迎');</script>");
@@ -26,11 +27,12 @@ namespace WebApplication1
                     Response.Write("<script>window.location = '/index.aspx'</script>");
                 }
             }
-            else
-            {
+                 else
+                {
                 Response.Write("<script>alert('请先登录');</script>");
-                Response.Write("<script>window.location = '/user.aspx'</script>");
+                    Response.Write("<script>window.location = '/user.aspx'</script>");
             }
+                
         }
     }
 }

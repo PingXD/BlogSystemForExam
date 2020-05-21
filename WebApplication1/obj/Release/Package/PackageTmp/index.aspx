@@ -95,8 +95,8 @@
 					{
                         
 						
-                        $(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
-                        
+                        //$(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
+                        $(".article-class").append("<li><a dir=\"ltr\" href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a><span dir=\"ltr\"></span></li>")
                         
 						
 					}
@@ -234,15 +234,9 @@
 								<div class="widget Label" data-version="1" id="Label1">
 									<h2>文章分类</h2>
 									<div class="widget-content list-label-widget-content">
-										<ul>
-											<li>
-												<a dir="ltr" href="">Java</a>
-												<span dir="ltr">(68)</span>
-											</li>
-											<li>
-												<a dir="ltr" href="">Documents</a>
-												<span dir="ltr">(39)</span>
-											</li>
+										<ul class="article-class">
+											
+											
 										</ul>
 										<div class="clear"></div>
 									</div>
@@ -252,13 +246,14 @@
 							
 						</div>
 	    </form>
-				<div align="center">
+			<div align="center">
 			<div class="left">
 				在线人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
 			</div>
 			<div class="right">
 				总计访问：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
 			</div>
+                <div class="cen"></div>
 		</div>
 	</body>
 	 <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
