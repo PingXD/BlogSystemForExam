@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user.Master" AutoEventWireup="true" CodeBehind="user.aspx.cs" Inherits="WebApplication1.user1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
     <style type="text/css">
     body{
 
     margin:0 auto;
-    background-image: url(img/bgd.png);
+    background-image: url(img/bgd2.png);
     width:1000px;
 
 }
@@ -126,6 +127,7 @@
     </tr>
 </table>
 </body>
+    <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
 </asp:Content>
 
 

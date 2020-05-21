@@ -24,7 +24,22 @@
 			}
 		</style>
 		<script>
-            var ajaxRquest = $.ajax({
+			function getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] == variable) { return pair[1]; }
+                }
+                return (false);
+			}
+
+		</script>
+		<script>
+            if (true) {
+
+            }
+            var ajaxRquesttitle = $.ajax({
 
 
                 type: "POST",
@@ -52,12 +67,46 @@
                     //    }
                     //}
                     //console.log(result);
-                    for (id = 1; id++; id<=data.length) {
-						console.log(data[id - 2].article_title);
-						var biaoti = "<p><a href='detailed.html?id="+(id-1)+"'>" + data[id - 2].article_title + id + " </a></p>";
-                        console.log(data[id-2])
+					for (id = 0; id <= data.length-1;id=id+1) {
+						//console.log(data[id - 2].article_title);
+                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id="+(id+1)+"'>" + data[id].article_title+ " </a></p>";
+                        //console.log(data[id-2])
                         $(".entry-header").append(biaoti +'<br>');
                     }
+
+
+
+                }
+			});
+           
+            var ajaxRquestclass = $.ajax({
+
+
+                type: "POST",
+                url: 'PostALLAit.ashx',
+                data: { 'article_idd': "title" },
+                dataType: 'json',
+
+                //contentType:"application/json",
+
+
+                success: function (data) {
+                    for (clid = 0;  clid <= data.length-1; clid = clid + 1)
+					{
+                        
+						
+                        $(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
+                        
+                        
+						
+					}
+					
+                    //for (id = 1; id++; id <= data.length) {
+                    //    console.log(data[id - 2].article_title);
+                    //    var biaoti = "<p><a href='detailed.html?id=" + (id - 1) + "'>" + data[id - 2].article_title + id + " </a></p>";
+                    //    console.log(data[id - 2])
+                    //    $(".entry-header").append(biaoti + '<br>');
+                    //}
 
 
 
@@ -68,20 +117,27 @@
             .auto-style1 {
                 font-size: 100%;
             }
+	        #butt {
+
+				text-align: center;
+
+	        }
         </style>
 	</head>
 	<body>
 		<form id="form1" runat="server">
 		<div id="pagepbt">
 			<header class="site-headerpbt" id="mastheadpbt" role="banner">
-				
-                <div class="site-brandingpbt">
+
+
+				<div class="site-brandingpbt">
+
 					<div class="headersec section" id="headersec">
 						<div class="widget Header" data-version="1" id="Header1">
 							<div id="header-inner">
 								<div class="titlewrapper">
 									<h2 class="site-titlenbt">
-										<a href="#">P<span class="auto-style1">ing</span></a>X
+										<a href="#">PingX</a>
 									</h2>
 								</div>
 								<h2 class="site-descriptionnbt">Hello World</h2>
@@ -89,23 +145,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="site-socialpbt">
-				</div>
+
 				<nav class="main-navigationpbt" id="site-navigationpbt" role="navigation">
 					<button class="menu-togglepbt">分类菜单<i class="fa fa-align-justify"></i></button>
 					<div class="menu-pbt-container">
 						<ul class="menupbt">
-							<li><a href="#">首页</a></li>
-							<li>
-								<a href="#">Java</a>
-							</li>
-							<li>
-								<a href="#">PHP</a>
-							</li>
+							<li><a href="/index.aspx">首页</a></li>
+
 						</ul>
 					</div>
 				</nav>
-			</header>
+			   </header>
 			<div class="site-contentpbt" id="contentpbt">
 					<div class="content-areapbt" id="primarypbt">
 						<div class="site-mainpbt" id="mainpbt" role="main">
@@ -145,13 +195,23 @@
 						</div>
 					</div>
 					<div class="widget-areapbt" id="secondarypbt" role="complementary">
+
 						<div class="widget widget_search">
 							<div class="search-formpbt">
-								<label>
-									<span class="screen-reader-text">Search for:</span>
-									<input class="search-fieldpbt" name="q" placeholder="Search" title="搜索" type="search" value="">
-								</label>
-								<input class="search-submitpbt" type="submit" value="Search">
+								                    <script>
+                                                        $(function () {
+                                                            $("#Button1").click(function () {
+																window.open('/AddArticle.aspx?uid=' + getQueryVariable("uid"));
+                                                            });
+                                                        });
+
+                    </script>
+				<div id="butt">                
+				<input id="Button1" type="button" value="发布" />
+				<input id="Button2" type="button" value="登陆"onclick="window.location='/user.aspx'" />
+				<input id="Button3" type="button" value="注册"onclick="window.location = '/reg.aspx'" />
+
+                </div>
 							</div>
 						</div>
 						<div class="sidebarrightsec section" id="sidebarrightsec">
@@ -201,4 +261,5 @@
 			</div>
 		</div>
 	</body>
+	 <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
 </html>

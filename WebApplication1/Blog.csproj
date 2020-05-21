@@ -118,6 +118,7 @@
     <Content Include="images\logos\editormd-logo-96x96.png" />
     <Content Include="images\logos\vi.png" />
     <Content Include="img\bgd.png" />
+    <Content Include="img\bgd2.png" />
     <Content Include="img\pwd.png" />
     <Content Include="img\title.png" />
     <Content Include="img\uname.png" />
@@ -128,6 +129,7 @@
     <Content Include="js\editormd.js" />
     <Content Include="js\editormd.min.js" />
     <Content Include="js\Gulpfile.js" />
+    <Content Include="js\back.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="lib\codemirror\addons.min.js" />
     <Content Include="lib\codemirror\addon\comment\comment.js" />

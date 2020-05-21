@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user.Master" AutoEventWireup="true" CodeBehind="reg.aspx.cs" Inherits="WebApplication1.reg" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+            body{
+
+    margin:0 auto;
+    background-image: url(img/bgd2.png);
+    width:1000px;
+
+}
         .auto-style11 {
             width: 301px;
             height: 66px;
@@ -74,5 +81,6 @@
             <td class="auto-style1"></td>
         </tr>
     </table>
+     <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
 </asp:Content>
 

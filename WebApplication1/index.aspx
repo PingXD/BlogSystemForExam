@@ -67,9 +67,9 @@
                     //    }
                     //}
                     //console.log(result);
-                    for (id = 1; id++; id<=data.length) {
+					for (id = 0; id <= data.length-1;id=id+1) {
 						//console.log(data[id - 2].article_title);
-						var biaoti = "<p><a href='detailed.html?id="+(id-1)+"'>" + data[id - 2].article_title + id + " </a></p>";
+                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id="+(id+1)+"'>" + data[id].article_title+ " </a></p>";
                         //console.log(data[id-2])
                         $(".entry-header").append(biaoti +'<br>');
                     }
@@ -78,6 +78,7 @@
 
                 }
 			});
+           
             var ajaxRquestclass = $.ajax({
 
 
@@ -90,11 +91,11 @@
 
 
                 success: function (data) {
-                    for (clid = 0; clid = clid + 1; clid <= data.length)
+                    for (clid = 0;  clid <= data.length-1; clid = clid + 1)
 					{
                         
 						
-                        $(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid - 1].article_class + "\">" + data[clid-1].article_class + "</a></li>")
+                        $(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
                         
                         
 						
@@ -118,7 +119,7 @@
             }
 	        #butt {
 
-				text-align: center;：
+				text-align: center;
 
 	        }
         </style>
@@ -197,8 +198,16 @@
 
 						<div class="widget widget_search">
 							<div class="search-formpbt">
+								                    <script>
+                                                        $(function () {
+                                                            $("#Button1").click(function () {
+																window.open('/AddArticle.aspx?uid=' + getQueryVariable("uid"));
+                                                            });
+                                                        });
+
+                    </script>
 				<div id="butt">                
-				<input id="Button1" type="button" value="发布"onclick="window.open('/AddArticle.aspx')" />
+				<input id="Button1" type="button" value="发布" />
 				<input id="Button2" type="button" value="登陆"onclick="window.location='/user.aspx'" />
 				<input id="Button3" type="button" value="注册"onclick="window.location = '/reg.aspx'" />
 
@@ -252,4 +261,5 @@
 			</div>
 		</div>
 	</body>
+	 <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
 </html>
