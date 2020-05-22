@@ -41,5 +41,12 @@ namespace DAL
             dt = dbhelper.GetTable(sql);
             return dt;
         }
+        public static DataTable GetClassArt(string classname) 
+        {
+            string sql = string.Format("select * from articles where article_class =\"{0}\"", classname);
+            DataTable dt = new DataTable();
+            dt = dbhelper.GetTable(sql);
+            return dt;
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace WebApplication1
             int id;
             DataTable ds=null;
             string get = context.Request.Form["article_idd"];
-            if (get=="全部")
+            if (get=="all")
             {
                 
                 ds = BLL.Art.GetAitAllA();
@@ -33,22 +33,25 @@ namespace WebApplication1
             }
             else
             {
-
-                articles art = new articles();
-                if (get!="")
-                {
-                    ds = Art.GetAitAll(Convert.ToInt32(get));
-                    DataRow dr = ds.Rows[0];
-                    art.article_title = dr["article_title"].ToString();
-                    art.article_content = dr["article_content"].ToString();
-                    context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));
-
-                }
-                    
+                string getencod=System.Web.HttpUtility.UrlDecode(get, System.Text.Encoding.GetEncoding("UTF-8"));
+                ds = Art.GetClassArt(getencod);
                 
-                    
-                   
-                
+                context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
+                //articles art = new articles();
+                //if (get!="")
+                //{
+                //    ds = Art.GetAitAll(Convert.ToInt32(get));
+                //    DataRow dr = ds.Rows[0];
+                //    art.article_title = dr["article_title"].ToString();
+                //    art.article_content = dr["article_content"].ToString();
+                //    context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));
+
+                //}
+
+
+
+
+
 
 
                 //context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(art));

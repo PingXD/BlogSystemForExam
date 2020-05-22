@@ -35,16 +35,21 @@
                 }
                 return (false);
             }
-		</script>
-		<script>
-            if (true) {
 
-            }
+			function getclassname()
+			{
+				var classname = getQueryVariable("class");
+				if (classname == false) {
+                    classname = "all"
+				}
+				return classname;
+			}
+
             var ajaxRquesttitle = $.ajax({
 
                 type: "POST",
                 url: 'PostALLAit.ashx',
-                data: { 'article_idd': "全部" },
+                data: { 'article_idd': getclassname() },
                 dataType: 'json',
 
                 //contentType:"application/json",
