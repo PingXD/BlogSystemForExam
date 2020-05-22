@@ -143,13 +143,19 @@
                             var title = $("#articleTitle").val();
                             var content = $("#articleContent").val();
                             var typeId = $("#articleCategory").find("option:selected").text();
+                            //正则表达式返回详情的前30--的字符
+                            var artdet = $("#articleContent").val().substring(0, 100);
+                            artdet = artdet.replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\？|\。|\！|\@|\#|\￥|\%|\…]/g, ""); 
+                            
+                            console.log(artdet);
                             $.ajax({
                                 type: "POST",
                                 url: 'GetPostEditAll.ashx',
                                 data: {
                                     'article_title': title,
                                     'article_content': Base64.encode(content),
-                                    'article_class': typeId
+                                    'article_class': typeId,
+                                    'article_content_20': artdet,
                                 },
                                 dataType: 'json',
                                 //contentType:"application/json",

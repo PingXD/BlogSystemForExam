@@ -20,17 +20,18 @@ namespace WebApplication1
             int id;
             DataTable ds=null;
             string get = context.Request.Form["article_idd"];
-            if (get=="all")
+            if (get == "all")
             {
-                
+
                 ds = BLL.Art.GetAitAllA();
                 context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
             }
-            else if (get =="title")
+            else if (get == "title")
             {
                 ds = Art.GetClass();
                 context.Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ds));
             }
+
             else
             {
                 string getencod=System.Web.HttpUtility.UrlDecode(get, System.Text.Encoding.GetEncoding("UTF-8"));

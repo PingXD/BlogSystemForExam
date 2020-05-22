@@ -18,9 +18,8 @@ namespace DAL
         public static bool CookieCheacker() {
             //cookie验证
             bool yn = false;
-            try
-            {
-                if (HttpContext.Current.Request.Cookies["uid"] != null || HttpContext.Current.Request.Cookies["user"].Value != null)
+           
+                if (HttpContext.Current.Request.Cookies["uid"] != null && HttpContext.Current.Request.Cookies["user"].Value != null)
                 {
 
                     yn = UserService.UidGetReUIDandPWDToMd5(HttpContext.Current.Request.Cookies["uid"].Value) == HttpContext.Current.Request.Cookies["user"].Value ? true : false;
@@ -28,13 +27,9 @@ namespace DAL
                     // uname是获取name为user的co okie   
                     //通过传入的uid验证与cookie的值是否相等
                 }
-            }
+           
 
-            catch (NullReferenceException)
-            {
-                 
-                throw;
-            }
+
 
 
             //当bool变量yn为真时，验证成功  为假则失败   真的时候为登陆成功  否的时候为登陆失败 

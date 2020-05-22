@@ -30,6 +30,8 @@ namespace Model
         ///<summary></summary>
         public long article_like_count { get; set; }
         public string article_class { get; set; }
+        public string artcle_content_20 { get; set; }
+
 
 
     }

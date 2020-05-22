@@ -71,7 +71,7 @@
                     //console.log(result);
                     for (id = 0; id <= data.length - 1; id = id + 1) {
                         //console.log(data[id - 2].article_title);
-                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + (id + 1) + "'>" + data[id].article_title + " </a></p>";
+                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + (id + 1) + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20+"</a></p></p>";
                         //console.log(data[id-2])
                         $(".entry-header").append(biaoti + '<br>');
                     }

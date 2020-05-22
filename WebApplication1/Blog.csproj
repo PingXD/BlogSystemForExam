@@ -477,6 +477,9 @@
     <Compile Include="AddArticle.aspx.designer.cs">
       <DependentUpon>AddArticle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GetAllaitcontent.ashx.cs">
+      <DependentUpon>GetAllaitcontent.ashx</DependentUpon>
+    </Compile>
     <Compile Include="GetPostEditAll.ashx.cs">
       <DependentUpon>GetPostEditAll.ashx</DependentUpon>
     </Compile>
@@ -535,6 +538,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="GetPostEditAll.ashx" />
+    <Content Include="GetAllaitcontent.ashx" />
     <None Include="packages.config" />
     <Content Include="plugins\emoji-dialog\emoji.json" />
     <Content Include="plugins\help-dialog\help.md" />

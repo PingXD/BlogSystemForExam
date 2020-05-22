@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
@@ -11,20 +12,21 @@
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="lib/jquery.flowchart.min.js"></script>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
-				<style type="text/css">
-			.left{
+		<style type="text/css">
+			.left {
 				margin-left: auto;
 				width: 50%;
 				float: left;
 			}
-			.right{
+			
+			.right {
 				margin-right: auto;
 				width: 50%;
 				float: left;
 			}
 		</style>
 		<script>
-			function getQueryVariable(variable) {
+            function getQueryVariable(variable) {
                 var query = window.location.search.substring(1);
                 var vars = query.split("&");
                 for (var i = 0; i < vars.length; i++) {
@@ -32,31 +34,31 @@
                     if (pair[0] == variable) { return pair[1]; }
                 }
                 return (false);
+            }
+
+			function getclassname()
+			{
+				var classname = getQueryVariable("class");
+				if (classname == false) {
+                    classname = "all"
+				}
+				return classname;
 			}
 
-		</script>
-		<script>
-            if (true) {
-
-            }
             var ajaxRquesttitle = $.ajax({
-
 
                 type: "POST",
                 url: 'PostALLAit.ashx',
-                data: { 'article_idd': "全部" },
-				dataType: 'json',
-                
-                //contentType:"application/json",
+                data: { 'article_idd': getclassname() },
+                dataType: 'json',
 
+                //contentType:"application/json",
 
                 success: function (data) {
                     //var arr = new Array();
                     //arr.push(data);
                     //var a = data;
                     //console.log(data);
-
-
 
                     //var result = [];
                     //var obj = {};
@@ -67,20 +69,17 @@
                     //    }
                     //}
                     //console.log(result);
-					for (id = 0; id <= data.length-1;id=id+1) {
-						//console.log(data[id - 2].article_title);
-                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id="+(id+1)+"'>" + data[id].article_title+ " </a></p>";
+                    for (id = 0; id <= data.length - 1; id = id + 1) {
+                        //console.log(data[id - 2].article_title);
+                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + (id + 1) + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20+"</a></p></p>";
                         //console.log(data[id-2])
-                        $(".entry-header").append(biaoti +'<br>');
+                        $(".entry-header").append(biaoti + '<br>');
                     }
 
-
-
                 }
-			});
-           
-            var ajaxRquestclass = $.ajax({
+            });
 
+            var ajaxRquestclass = $.ajax({
 
                 type: "POST",
                 url: 'PostALLAit.ashx',
@@ -89,18 +88,14 @@
 
                 //contentType:"application/json",
 
-
                 success: function (data) {
-                    for (clid = 0;  clid <= data.length-1; clid = clid + 1)
-					{
-                        
-						
+                    for (clid = 0; clid <= data.length - 1; clid = clid + 1) {
+
                         //$(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
                         $(".article-class").append("<li><a dir=\"ltr\" href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a><span dir=\"ltr\"></span></li>")
-                        
-						
-					}
-					
+
+                    }
+
                     //for (id = 1; id++; id <= data.length) {
                     //    console.log(data[id - 2].article_title);
                     //    var biaoti = "<p><a href='detailed.html?id=" + (id - 1) + "'>" + data[id - 2].article_title + id + " </a></p>";
@@ -108,55 +103,54 @@
                     //    $(".entry-header").append(biaoti + '<br>');
                     //}
 
-
-
                 }
             });
 		</script>
-	    <style type="text/css">
-            .auto-style1 {
-                font-size: 100%;
-            }
-	        #butt {
-
+		<style type="text/css">
+			.auto-style1 {
+				font-size: 100%;
+			}
+			
+			#butt {
 				text-align: center;
-
-	        }
-        </style>
+			}
+		</style>
 	</head>
+
 	<body>
 		<form id="form1" runat="server">
-		<div id="pagepbt">
-			<header class="site-headerpbt" id="mastheadpbt" role="banner">
+			<div id="pagepbt">
+				<header class="site-headerpbt" id="mastheadpbt" role="banner">
 
+					<div class="site-brandingpbt">
 
-				<div class="site-brandingpbt">
-
-					<div class="headersec section" id="headersec">
-						<div class="widget Header" data-version="1" id="Header1">
-							<div id="header-inner">
-								<div class="titlewrapper">
-									<h2 class="site-titlenbt">
+						<div class="headersec section" id="headersec">
+							<div class="widget Header" data-version="1" id="Header1">
+								<div id="header-inner">
+									<div class="titlewrapper">
+										<h2 class="site-titlenbt">
 										<a href="#">PingX</a>
 									</h2>
+									</div>
+									<h2 class="site-descriptionnbt">Hello World</h2>
 								</div>
-								<h2 class="site-descriptionnbt">Hello World</h2>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<nav class="main-navigationpbt" id="site-navigationpbt" role="navigation">
-					<button class="menu-togglepbt">分类菜单<i class="fa fa-align-justify"></i></button>
-					<div class="menu-pbt-container">
-						<ul class="menupbt">
-							<li><a href="/index.aspx">首页</a></li>
+					<nav class="main-navigationpbt" id="site-navigationpbt" role="navigation">
+						<button class="menu-togglepbt">分类菜单<i class="fa fa-align-justify"></i></button>
+						<div class="menu-pbt-container">
+							<ul class="menupbt">
+								<li>
+									<a href="/index.aspx">首页</a>
+								</li>
 
-						</ul>
-					</div>
-				</nav>
-			   </header>
-			<div class="site-contentpbt" id="contentpbt">
+							</ul>
+						</div>
+					</nav>
+				</header>
+				<div class="site-contentpbt" id="contentpbt">
 					<div class="content-areapbt" id="primarypbt">
 						<div class="site-mainpbt" id="mainpbt" role="main">
 							<div class="mainblogsec section" id="mainblogsec">
@@ -170,23 +164,22 @@
 												<div class="post-outer">
 													<article class="post hentry">
 														<header class="entry-header">
-                                                            <div>	</div>
+															<div> </div>
 														</header>
-                                                        <footer class="entry-footerpbt">
+														<footer class="entry-footerpbt">
 														</footer>
 													</article>
 												</div>
 											</div>
 										</div>
-                                        <input type="hidden" id="js_page" name="page" value="1">
+										<input type="hidden" id="js_page" name="page" value="1">
 										<script>
-											function search(page) 
-											{
-												var js_form = document.getElementById("js_search");
-												document.getElementById("js_page").value = page;
-												js_form.method = 'POST';
-												js_form.submit();
-												}
+                                            function search(page) {
+                                                var js_form = document.getElementById("js_search");
+                                                document.getElementById("js_page").value = page;
+                                                js_form.method = 'POST';
+                                                js_form.submit();
+                                            }
 										</script>
 									</div>
 									<div class="clear"></div>
@@ -198,20 +191,19 @@
 
 						<div class="widget widget_search">
 							<div class="search-formpbt">
-								                    <script>
-                                                        $(function () {
-                                                            $("#Button1").click(function () {
-																window.open('/AddArticle.aspx?uid=' + getQueryVariable("uid"));
-                                                            });
-                                                        });
+								<script>
+                                    $(function () {
+                                        $("#Button1").click(function () {
+                                            window.open('/AddArticle.aspx?uid=' + getQueryVariable("uid"));
+                                        });
+                                    });
+								</script>
+								<div id="butt">
+									<input id="Button1" type="button" value="发布" />
+									<input id="Button2" type="button" value="登陆" onclick="window.location = '/user.aspx'" />
+									<input id="Button3" type="button" value="注册" onclick="window.location = '/reg.aspx'" />
 
-                    </script>
-				<div id="butt">                
-				<input id="Button1" type="button" value="发布" />
-				<input id="Button2" type="button" value="登陆"onclick="window.location='/user.aspx'" />
-				<input id="Button3" type="button" value="注册"onclick="window.location = '/reg.aspx'" />
-
-                </div>
+								</div>
 							</div>
 						</div>
 						<div class="sidebarrightsec section" id="sidebarrightsec">
@@ -224,8 +216,8 @@
 												123Hello
 											</a>
 										</li>
-										<li>[365cent]
-											评论</li>
+										<li>[365cent] 评论
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -235,26 +227,30 @@
 									<h2>文章分类</h2>
 									<div class="widget-content list-label-widget-content">
 										<ul class="article-class">
-											
-											
+
 										</ul>
 										<div class="clear"></div>
 									</div>
 								</div>
 							</div>
 
-							
 						</div>
-	    </form>
-			<div align="center">
+		</form>
+		<div align="center">
 			<div class="left">
-				在线人数：<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+				在线人数：
+				<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
 			</div>
 			<div class="right">
-				总计访问：<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+				总计访问：
+				<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
 			</div>
-                <div class="cen"></div>
+			<div class="cen"></div>
 		</div>
 	</body>
-	 <script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
+	<script>
+        $(".right").after($(".login"))
+	</script>
+	<script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
+
 </html>

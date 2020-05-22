@@ -1,21 +1,22 @@
 ﻿<!DOCTYPE html>
 
-
 <html>
+
 <head>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet" href="css/editormd.css" />
     <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
-    <script src="js/jquery.min.js" "></script>
-    <script src="js/base64.min.js"></script>
-    <script src="lib/marked.min.js"></script>
-    <script src="lib/prettify.min.js"></script>
-    <script src="lib/raphael.min.js"></script>
-    <script src="lib/underscore.min.js"></script>
-    <script src="/lib/sequence-diagram.min.js"></script>
-    <script src="/lib/flowchart.min.js"></script>
 
-    <script src="js/editormd.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/base64.min.js "></script>
+    <script src="lib/marked.min.js "></script>
+    <script src="lib/prettify.min.js "></script>
+    <script src="lib/raphael.min.js "></script>
+    <script src="lib/underscore.min.js "></script>
+    <script src="/lib/sequence-diagram.min.js "></script>
+    <script src="/lib/flowchart.min.js "></script>
+
+    <script src="js/editormd.min.js "></script>
 
 
     <style>
@@ -29,41 +30,52 @@
 </head>
 <body>
 
-    <div class="panel-body">
+    <div class="panel-body ">
         <!-- 用于显示md编辑器的md格式 -->
         <div id="doc-content">
             <!--<textarea  style='display:none;'></textarea>-->
         </div>
     </div>
     <script>
-        var url = decodeURI(window.location.search);
-        result = url.substr(url.indexOf("=") + 1);
-
+        //var url = decodeURI(window.location.search);
+        //result = url.substr(url.indexOf("=") + 1);
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+        var idname = getQueryVariable("id");
         var ajaxRquest = $.ajax({
 
 
             type: "POST",
-            url: 'PostALLAit.ashx',
-            data: { 'article_idd': result },
+            url: 'GetAllaitcontent.ashx',
+            data: { 'article_idd': idname },
             dataType: 'json',
             async: false,
             //这里被ajax抬了一手，排错四五个小时，要设置ajax同步异步，异步情况下加载完页面 才收到ashx的respon，导致后面的mdjs执行在获取值之前
             //同步情况下  收到ashx传回的数据之后才继续往下执行
-            //contentType:"application/json",
+            //contentType:"application/json ",
 
 
             success: function (data) {
-                var txt1 = "<textarea  style='display:none;'>" + Base64.decode(data.article_content) + "</textarea>";
+                //console.log(Base64.decode(data.article_content));
+                var txt1 = "<textarea style='display:none;'>" + Base64.decode(data["0"].article_content) + "</textarea>";
                 $("#doc-content").append(txt1);
+                //console.log(txt1);
+                //console.log(Base64.decode(data.article_content));
             }
         });
     </script>
 
     <script>
-
         var testEditor;
         $(function () {
-            testEditor = editormd.markdownToHTML("doc-content", {//注意：这里是上面DIV的id
+            testEditor = editormd.markdownToHTML("doc-content", { //注意：这里是上面DIV的id
                 htmlDecode: "style,script,iframe",
                 emoji: true,
                 taskList: true,
@@ -76,4 +88,5 @@
     </script>
 
 </body>
+
 </html>

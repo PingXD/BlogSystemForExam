@@ -37,6 +37,7 @@ namespace WebApplication1
             art.article_title = context.Request.Form["article_title"].ToString();
             art.article_content = context.Request.Form["article_content"].ToString();
             art.article_class = context.Request.Form["article_class"].ToString();
+            art.artcle_content_20 = context.Request.Form["article_content_20"].ToString();
             int t=BLL.Art.SaveAir(art);
 
             //context.Response.Write( "{ \"result\":\"success\"}");

@@ -22,7 +22,7 @@ namespace WebApplication1
         {
 
             Result res = new Result();
-            if (HttpContext.Current.Request.Cookies["user"] != null || HttpContext.Current.Request.Cookies["uid"] != null)
+            if (HttpContext.Current.Request.Cookies["user"] != null && HttpContext.Current.Request.Cookies["uid"] != null)
             {            
                          
                 //string uid = Request.QueryString["uid"];
