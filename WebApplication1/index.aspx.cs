@@ -22,13 +22,13 @@ namespace WebApplication1
         {
 
             Result res = new Result();
-            if (HttpContext.Current.Request.Cookies["user"] != null)
+            if (HttpContext.Current.Request.Cookies["user"] != null || HttpContext.Current.Request.Cookies["uid"] != null)
             {            
                          
-                string uid = Request.QueryString["uid"];
-                yn = DAL.CookieChecker.CookieCheacker(uid, "user");
-                if (uid != null)
-                {
+                //string uid = Request.QueryString["uid"];
+                yn = DAL.CookieChecker.CookieCheacker();
+                //if (uid != null)
+                //{
                     if (yn == true)
                     {
                         //res.result = "loginon";
@@ -41,13 +41,13 @@ namespace WebApplication1
                         //Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(res));
                         Response.Write("<div class=\"login\">未登陆</div>");                        //Response.Write("<script>window.location = '/index.aspx'</script>");
                     }
-                }
-                else
-                {
-                    //res.result = "loginoff";
-                    //Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(res));
-                    Response.Write("<div class=\"login\">未登陆</div>");                    //Response.Write("<script>window.location = '/user.aspx'</script>");
-                }
+                //}
+                //else
+                //{
+                //    //res.result = "loginoff";
+                //    //Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(res));
+                //    Response.Write("<div class=\"login\">未登陆</div>");                    //Response.Write("<script>window.location = '/user.aspx'</script>");
+                //}
             }
            
             else

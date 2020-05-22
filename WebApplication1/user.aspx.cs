@@ -38,7 +38,7 @@ namespace WebApplication1
                 {
                     //Response.Write(string.Format("<script>alert('欢迎您{0}')</script>",nickname));
                     UserManage.Cook(pu);
-                    
+                    UserManage.Getmd5cookuid(pu);
                     Response.Redirect(string.Format("index.aspx?uid={0}", pu.user_id));
                 }
                 else Response.Write("<script>alert('密码错误');</script>");

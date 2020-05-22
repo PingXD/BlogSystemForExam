@@ -32,6 +32,7 @@ namespace BLL
         /// <param name="uid"></param>
         /// <returns></returns>
         public static string Getmd5cook(string uid) => UserService.UidGetReUIDandPWDToMd5(uid);
+        public static void Getmd5cookuid(users cook) => Cookie.Cooliegetuid(cook);
 
     }
 }
