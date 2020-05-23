@@ -12,20 +12,6 @@
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<script src="lib/jquery.flowchart.min.js"></script>
 		<link href="css/style.css" type="text/css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/editormd.css" />
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/base64.min.js "></script>
-    <script src="lib/marked.min.js "></script>
-    <script src="lib/prettify.min.js "></script>
-    <script src="lib/raphael.min.js "></script>
-    <script src="lib/underscore.min.js "></script>
-    <script src="/lib/sequence-diagram.min.js "></script>
-    <script src="/lib/flowchart.min.js "></script>
-
-    <script src="js/editormd.min.js "></script>
-
 		<style type="text/css">
 			.left {
 				margin-left: auto;
@@ -49,7 +35,7 @@
                 }
                 return (false);
             }
-			//url参数获取方法
+
 			function getclassname()
 			{
 				var classname = getQueryVariable("class");
@@ -59,25 +45,40 @@
 				return classname;
 			}
 
-      //      var ajaxRquesttitle = $.ajax({
+            var ajaxRquesttitle = $.ajax({
 
-      //          type: "POST",
-      //          url: 'PostALLAit.ashx',
-      //          data: { 'article_idd': getclassname() },
-      //          dataType: 'json',
+                type: "POST",
+                url: 'PostALLAit.ashx',
+                data: { 'article_idd': getclassname() },
+                dataType: 'json',
 
+                //contentType:"application/json",
 
-      //          success: function (data) {
-      //              for (id = data.length-1; id >=0 ; id = id - 1) {
+                success: function (data) {
+                    //var arr = new Array();
+                    //arr.push(data);
+                    //var a = data;
+                    //console.log(data);
 
-						//var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + data[id].article_id + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20 + "</a></p></p>";
-      //                  //console.log(data[id-2])
-      //                  $(".entry-header").append(biaoti + '<br>');
-      //              }
+                    //var result = [];
+                    //var obj = {};
+                    //for (var i = 0; i < data.length; i++) {
+                    //    if (!obj[data[i].article_title]) {
+                    //        result.push(data[i]);
+                    //        obj[data[i].article_title] = true;
+                    //    }
+                    //}
+                    //console.log(result);
+                    for (id = data.length-1; id >=0 ; id = id - 1) {
+						//console.log(data[id - 2].article_title);
+						var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + data[id].article_id + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20 + "</a></p></p>";
+                        //console.log(data[id-2])
+                        $(".entry-header").append(biaoti + '<br>');
+                    }
 
-      //          }
-      //      });
-			//标题ajax
+                }
+            });
+
             var ajaxRquestclass = $.ajax({
 
                 type: "POST",
@@ -103,8 +104,7 @@
                     //}
 
                 }
-			});
-			//分类ajax
+            });
 		</script>
 		<style type="text/css">
 			.auto-style1 {
@@ -164,13 +164,7 @@
 												<div class="post-outer">
 													<article class="post hentry">
 														<header class="entry-header">
-															
-    <div class="panel-body ">
-        <!-- 用于显示md编辑器的md格式 -->
-        <div id="doc-content">
-            <!--<textarea  style='display:none;'></textarea>-->
-        </div>
-    </div>
+															<div> </div>
 														</header>
 														<footer class="entry-footerpbt">
 														</footer>
@@ -262,60 +256,6 @@
 	<script>
         $(".right").after($(".login"))
 	</script>
-
-	
 	<script type="text/javascript" color="0,174,255" opacity='0.7' zIndex="-2" count="200" src="/js/back.js"></script>
-	<script>
-                //var url = decodeURI(window.location.search);
-                //result = url.substr(url.indexOf("=") + 1);
-                function getQueryVariable(variable) {
-                    var query = window.location.search.substring(1);
-                    var vars = query.split("&");
-                    for (var i = 0; i < vars.length; i++) {
-                        var pair = vars[i].split("=");
-                        if (pair[0] == variable) { return pair[1]; }
-                    }
-                    return (false);
-                }
-                var idname = getQueryVariable("id");
-                var ajaxRquest = $.ajax({
-
-
-                    type: "POST",
-                    url: 'GetAllaitcontent.ashx',
-                    data: { 'article_idd': idname },
-                    dataType: 'json',
-                    async: false,
-                    //这里被ajax抬了一手，排错四五个小时，要设置ajax同步异步，异步情况下加载完页面 才收到ashx的respon，导致后面的mdjs执行在获取值之前
-                    //同步情况下  收到ashx传回的数据之后才继续往下执行
-                    //contentType:"application/json ",
-
-
-                    success: function (data) {
-                        //console.log(Base64.decode(data.article_content));
-                        var txt1 = "<textarea style='display:none;'>" + Base64.decode(data["0"].article_content) + "</textarea>";
-                        $("#doc-content").append(txt1);
-                        //console.log(txt1);
-                        //console.log(Base64.decode(data.article_content));
-                    }
-                });
-    </script>
-
-	<%--ajax获取文章方法--%>
-	<script>
-            var testEditor;
-            $(function () {
-                testEditor = editormd.markdownToHTML("doc-content", { //注意：这里是上面DIV的id
-                    htmlDecode: "style,script,iframe",
-                    emoji: true,
-                    taskList: true,
-                    tex: true, // 默认不解析
-                    flowChart: true, // 默认不解析
-                    sequenceDiagram: true, // 默认不解析
-                    codeFold: true
-                });
-            });
-    </script>
-	<%--//md方法--%>
 
 </html>
