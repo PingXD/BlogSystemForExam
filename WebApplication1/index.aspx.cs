@@ -39,7 +39,8 @@ namespace WebApplication1
                     {
                         //res.result = "loginoff";
                         //Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(res));
-                        Response.Write("<div class=\"login\">未登陆</div>");                        //Response.Write("<script>window.location = '/index.aspx'</script>");
+                        Response.Write("<div class=\"login\">未登陆</div>");                        
+                    //Response.Write("<script>window.location = '/index.aspx'</script>");
                     }
                 //}
                 //else

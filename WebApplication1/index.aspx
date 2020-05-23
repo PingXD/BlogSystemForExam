@@ -6,7 +6,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-		<title>PingX</title>
+		<title>PingX Blog</title>
 		<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
 		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
@@ -69,9 +69,9 @@
                     //    }
                     //}
                     //console.log(result);
-                    for (id = 0; id <= data.length - 1; id = id + 1) {
-                        //console.log(data[id - 2].article_title);
-                        var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + (id + 1) + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20+"</a></p></p>";
+                    for (id = data.length-1; id >=0 ; id = id - 1) {
+						//console.log(data[id - 2].article_title);
+						var biaoti = "<p><a style=\"font-size:26px;\" href='detailed.html?id=" + data[id].article_id + "'>" + data[id].article_title + " </a><br><a style=\"font-size: 13px;\">" + data[id].artcle_content_20 + "</a></p></p>";
                         //console.log(data[id-2])
                         $(".entry-header").append(biaoti + '<br>');
                     }
@@ -92,7 +92,7 @@
                     for (clid = 0; clid <= data.length - 1; clid = clid + 1) {
 
                         //$(".menupbt").append("<li><a href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a></li>")
-                        $(".article-class").append("<li><a dir=\"ltr\" href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</a><span dir=\"ltr\"></span></li>")
+                        $(".article-class").append("<li><a dir=\"ltr\" href=\"/index.aspx?class=" + data[clid].article_class + "\">" + data[clid].article_class + "</li>")
 
                     }
 
@@ -132,14 +132,14 @@
 										<a href="#">PingX</a>
 									</h2>
 									</div>
-									<h2 class="site-descriptionnbt">Hello World</h2>
+									<h2 class="site-descriptionnbt">世界不止眼前的苟且，还有排骨和汤，虾和蟹黄。</h2>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<nav class="main-navigationpbt" id="site-navigationpbt" role="navigation">
-						<button class="menu-togglepbt">分类菜单<i class="fa fa-align-justify"></i></button>
+						<button class="menu-togglepbt">菜单<i class="fa fa-align-justify"></i></button>
 						<div class="menu-pbt-container">
 							<ul class="menupbt">
 								<li>
@@ -173,14 +173,15 @@
 											</div>
 										</div>
 										<input type="hidden" id="js_page" name="page" value="1">
-										<script>
+<%--										<script>
                                             function search(page) {
                                                 var js_form = document.getElementById("js_search");
                                                 document.getElementById("js_page").value = page;
                                                 js_form.method = 'POST';
                                                 js_form.submit();
                                             }
-										</script>
+									搜索功能，暂未想到好的方法
+										</script>--%>
 									</div>
 									<div class="clear"></div>
 								</div>
@@ -208,16 +209,20 @@
 						</div>
 						<div class="sidebarrightsec section" id="sidebarrightsec">
 							<div class="widget Label" data-version="1" id="Label0">
-								<h2>最新评论</h2>
+								<h2>简介</h2>
 								<div class="widget-content list-label-widget-content">
 									<ul>
-										<li>[test]
-											<a dir="ltr" href="#">
-												123Hello
+									    <li>
+											<a  href="https://github.com/PingXD/">
+												GitHub主页
 											</a>
 										</li>
-										<li>[365cent] 评论
-										</li>
+                                        <li>
+											<a  href="#">
+												邮箱:admin@pingx.cc
+											</a>
+                                        </li>
+
 									</ul>
 								</div>
 							</div>
@@ -227,7 +232,7 @@
 									<h2>文章分类</h2>
 									<div class="widget-content list-label-widget-content">
 										<ul class="article-class">
-
+											<li><a dir="ltr" href="/index.aspx"> 全部文章</a></li>
 										</ul>
 										<div class="clear"></div>
 									</div>
