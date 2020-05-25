@@ -58,12 +58,12 @@
 			<td class="auto-style13" rowspan="2">
 				<img alt="" class="auto-style15" src="img/pwd.png" /></td>
 			<td class="auto-style8">
-				<asp:TextBox ID="pwdbox" runat="server" Height="26px" Width="221px"></asp:TextBox>
+				<asp:TextBox ID="pwdbox" runat="server" Height="26px" Width="221px" TextMode="Password"></asp:TextBox>
 			</td>
 		</tr>
 		<tr>
 			<td class="auto-style8">
-				<asp:TextBox ID="pwdboxy" runat="server" Height="26px" Width="221px"></asp:TextBox>
+				<asp:TextBox ID="pwdboxy" runat="server" Height="26px" Width="221px" TextMode="Password"></asp:TextBox>
 			</td>
 		</tr>
 		<tr>

@@ -26,6 +26,7 @@ namespace WebApplication1
             if (UserManage.Add(regu)==1)
             {
                 Response.Write("<script>alert('注册成功');</script>");
+                Response.Redirect("index.aspx");
             }
             else
             {
